@@ -1,0 +1,6 @@
+column_name,null_count,negative_count,row_count
+gross_npa_amount_all,0,0,12
+gross_npa_to_advances_pct_all,0,0,12
+net_npa_amount_all,0,0,12
+net_npa_to_advances_pct_all,0,0,12
+advances_gross_all,0,0,12

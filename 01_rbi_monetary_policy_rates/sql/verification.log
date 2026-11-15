@@ -1,0 +1,16 @@
+verification — P01 RBI Monetary Policy & Reserve Requirements Tracker
+==========================================================================================
+  PASS Q01  (1 rows × 5 cols)
+  PASS Q02  (1 rows × 8 cols)
+  PASS Q03  (107 rows × 4 cols)
+  PASS Q04  (107 rows × 5 cols)
+  PASS Q05  (107 rows × 3 cols)
+  PASS Q06  (107 rows × 3 cols)
+  PASS Q07  (10 rows × 4 cols)
+  PASS Q08  (1 rows × 5 cols)
+  PASS Q09  (1 rows × 6 cols)
+  PASS Q10  (107 rows × 4 cols)
+  PASS Q11  (107 rows × 4 cols)
+  PASS Q12  (5 rows × 4 cols)
+  PASS Q13  (1 rows × 6 cols)
+  PASS Q14  (107 rows × 6 cols)

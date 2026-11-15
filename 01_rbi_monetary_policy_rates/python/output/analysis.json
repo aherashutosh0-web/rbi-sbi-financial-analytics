@@ -1,0 +1,187 @@
+{
+  "project": "P01",
+  "title": "RBI Monetary Policy & Reserve Requirements Tracker",
+  "kpis": [
+    {
+      "label": "Latest Repo Rate",
+      "unit": "%",
+      "value": 5.25
+    },
+    {
+      "label": "Latest CRR",
+      "unit": "%",
+      "value": 3.0
+    },
+    {
+      "label": "Latest SLR",
+      "unit": "%",
+      "value": 18.0
+    },
+    {
+      "label": "Repo Rate 10Y Avg",
+      "unit": "%",
+      "value": 6.463461538461539
+    }
+  ],
+  "datasets": {
+    "policy_rates": {
+      "rows": 107,
+      "period_range": [
+        "2008-04-26",
+        "2025-12-05"
+      ],
+      "diagnostics": [
+        {
+          "series": "bank_rate",
+          "n": 69,
+          "first": 9.5,
+          "latest": 5.5,
+          "min": 4.25,
+          "max": 10.25,
+          "min_period": "2020-05-22",
+          "max_period": "2013-07-15",
+          "mean": 6.839855072463768,
+          "std": 1.6236890574114597,
+          "latest_vs_mean_sigma": -0.8251919087265457,
+          "growth_mean_pct": -0.6709365474522232,
+          "growth_volatility_pp": 5.231637772892787,
+          "best_period": "2013-07-15",
+          "worst_period": "2020-03-27",
+          "rising_periods": 10,
+          "falling_periods": 26,
+          "regimes": {
+            "high_gt_1sd": 19,
+            "above_mean": 7,
+            "below_mean": 32,
+            "low_lt_minus1sd": 11
+          }
+        },
+        {
+          "series": "repo_rate",
+          "n": 104,
+          "first": 8.0,
+          "latest": 5.25,
+          "min": 4.0,
+          "max": 9.0,
+          "min_period": "2020-05-22",
+          "max_period": "2008-07-30",
+          "mean": 6.463461538461539,
+          "std": 1.3481060207441187,
+          "latest_vs_mean_sigma": -0.9001232245752753,
+          "growth_mean_pct": -0.29418390594789445,
+          "growth_volatility_pp": 4.739365602287993,
+          "best_period": "2022-06-08",
+          "worst_period": "2009-01-05",
+          "rising_periods": 26,
+          "falling_periods": 28,
+          "regimes": {
+            "high_gt_1sd": 22,
+            "above_mean": 29,
+            "below_mean": 36,
+            "low_lt_minus1sd": 17
+          }
+        },
+        {
+          "series": "reverse_repo_rate",
+          "n": 93,
+          "first": 5.0,
+          "latest": 3.35,
+          "min": 3.25,
+          "max": 7.5,
+          "min_period": "2009-04-21",
+          "max_period": "2011-10-25",
+          "mean": 5.136559139784948,
+          "std": 1.4525678122490049,
+          "latest_vs_mean_sigma": -1.2299316594512897,
+          "growth_mean_pct": -0.30776056894299936,
+          "growth_volatility_pp": 4.947497079770505,
+          "best_period": "2010-07-27",
+          "worst_period": "2009-01-05",
+          "rising_periods": 20,
+          "falling_periods": 21,
+          "regimes": {
+            "high_gt_1sd": 18,
+            "above_mean": 33,
+            "below_mean": 15,
+            "low_lt_minus1sd": 27
+          }
+        },
+        {
+          "series": "sdf_rate",
+          "n": 18,
+          "first": 3.75,
+          "latest": 5.0,
+          "min": 3.75,
+          "max": 6.25,
+          "min_period": "2022-04-08",
+          "max_period": "2023-02-08",
+          "mean": 5.291666666666667,
+          "std": 0.7517137283645714,
+          "latest_vs_mean_sigma": -0.38800231479238384,
+          "growth_mean_pct": 1.8772599296200336,
+          "growth_volatility_pp": 6.104779642456159,
+          "best_period": "2022-06-08",
+          "worst_period": "2025-06-06",
+          "rising_periods": 6,
+          "falling_periods": 4,
+          "regimes": {
+            "high_gt_1sd": 3,
+            "above_mean": 4,
+            "below_mean": 8,
+            "low_lt_minus1sd": 3
+          }
+        },
+        {
+          "series": "msf_rate",
+          "n": 75,
+          "first": 8.25,
+          "latest": 5.5,
+          "min": 4.25,
+          "max": 10.25,
+          "min_period": "2020-05-22",
+          "max_period": "2013-07-15",
+          "mean": 7.012666666666666,
+          "std": 1.670108697978387,
+          "latest_vs_mean_sigma": -0.9057294704815924,
+          "growth_mean_pct": -0.4220344429025839,
+          "growth_volatility_pp": 5.115150686955588,
+          "best_period": "2013-07-15",
+          "worst_period": "2020-03-27",
+          "rising_periods": 14,
+          "falling_periods": 26,
+          "regimes": {
+            "high_gt_1sd": 21,
+            "above_mean": 8,
+            "below_mean": 35,
+            "low_lt_minus1sd": 11
+          }
+        },
+        {
+          "series": "crr",
+          "n": 107,
+          "first": 7.75,
+          "latest": 3.0,
+          "min": 3.0,
+          "max": 9.0,
+          "min_period": "2020-03-28",
+          "max_period": "2008-08-30",
+          "mean": 4.852803738317757,
+          "std": 1.3965731607020953,
+          "latest_vs_mean_sigma": -1.326678609079314,
+          "growth_mean_pct": -0.7380164232039457,
+          "growth_volatility_pp": 5.32889704781236,
+          "best_period": "2021-03-27",
+          "worst_period": "2008-10-11",
+          "rising_periods": 11,
+          "falling_periods": 16,
+          "regimes": {
+            "high_gt_1sd": 11,
+            "above_mean": 28,
+            "below_mean": 61,
+            "low_lt_minus1sd": 7
+          }
+        }
+      ]
+    }
+  }
+}

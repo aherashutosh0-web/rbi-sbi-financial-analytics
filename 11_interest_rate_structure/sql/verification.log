@@ -1,0 +1,16 @@
+verification — P11 Interest Rate Structure & Transmission Analysis
+==========================================================================================
+  PASS Q01  (1 rows × 5 cols)
+  PASS Q02  (1 rows × 12 cols)
+  PASS Q03  (18 rows × 4 cols)
+  PASS Q04  (18 rows × 5 cols)
+  PASS Q05  (18 rows × 3 cols)
+  PASS Q06  (18 rows × 3 cols)
+  PASS Q07  (10 rows × 4 cols)
+  PASS Q08  (1 rows × 5 cols)
+  PASS Q09  (1 rows × 6 cols)
+  PASS Q10  (0 rows × 4 cols)
+  PASS Q11  (18 rows × 4 cols)
+  PASS Q12  (5 rows × 4 cols)
+  PASS Q13  (1 rows × 6 cols)
+  PASS Q14  (18 rows × 6 cols)

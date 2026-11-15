@@ -1,0 +1,346 @@
+{
+  "project": "P14",
+  "title": "SBI Financial Statement Analysis (Consolidated)",
+  "kpis": [
+    {
+      "label": "Total Revenue (\u20b9)",
+      "unit": "\u20b9",
+      "value": 2602451277000.0
+    },
+    {
+      "label": "Net Income (\u20b9)",
+      "unit": "\u20b9",
+      "value": 832987824000.0
+    },
+    {
+      "label": "Total Assets (\u20b9)",
+      "unit": "\u20b9",
+      "value": 83215685742000.0
+    },
+    {
+      "label": "ROE",
+      "unit": "%",
+      "value": 13.97323753487878
+    }
+  ],
+  "datasets": {
+    "fin_sbin_annual": {
+      "rows": 5,
+      "period_range": [
+        "2022-03-31",
+        "2026-03-31"
+      ],
+      "diagnostics": [
+        {
+          "series": "annualDilutedEPS",
+          "n": 5,
+          "first": 39.64,
+          "latest": 91.16,
+          "min": 39.64,
+          "max": 91.16,
+          "min_period": "2022-03-31",
+          "max_period": "2026-03-31",
+          "mean": 71.046,
+          "std": 20.82789067572614,
+          "latest_vs_mean_sigma": 0.9657242931201787,
+          "growth_mean_pct": 24.59000291782606,
+          "growth_volatility_pp": 22.760665726512833,
+          "best_period": "2023-03-31",
+          "worst_period": "2026-03-31",
+          "rising_periods": 4,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 0,
+            "above_mean": 3,
+            "below_mean": 1,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "annualTotalDebt",
+          "n": 5,
+          "first": 4576896083000.0,
+          "latest": 7268922204000.0,
+          "min": 4576896083000.0,
+          "max": 7268922204000.0,
+          "min_period": "2022-03-31",
+          "max_period": "2026-03-31",
+          "mean": 5762606268600.0,
+          "std": 1022572153121.8625,
+          "latest_vs_mean_sigma": 1.473065671504247,
+          "growth_mean_pct": 12.332892736741918,
+          "growth_volatility_pp": 4.664848502001364,
+          "best_period": "2026-03-31",
+          "worst_period": "2024-03-31",
+          "rising_periods": 4,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 1,
+            "below_mean": 2,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "annualTotalAssets",
+          "n": 5,
+          "first": 53608835294000.0,
+          "latest": 83215685742000.0,
+          "min": 53608835294000.0,
+          "max": 83215685742000.0,
+          "min_period": "2022-03-31",
+          "max_period": "2026-03-31",
+          "mean": 67369669122200.0,
+          "std": 11565186429385.514,
+          "latest_vs_mean_sigma": 1.3701479622963533,
+          "growth_mean_pct": 11.638174214222092,
+          "growth_volatility_pp": 2.3163337157624957,
+          "best_period": "2026-03-31",
+          "worst_period": "2025-03-31",
+          "rising_periods": 4,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 1,
+            "below_mean": 2,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "annualInterestIncome",
+          "n": 5,
+          "first": 2899726860000.0,
+          "latest": 5149325904000.0,
+          "min": 2899726860000.0,
+          "max": 5149325904000.0,
+          "min_period": "2022-03-31",
+          "max_period": "2026-03-31",
+          "mean": 4170502135400.0,
+          "std": 948292407933.1412,
+          "latest_vs_mean_sigma": 1.032196145842192,
+          "growth_mean_pct": 15.708627962032317,
+          "growth_volatility_pp": 9.099438903897312,
+          "best_period": "2024-03-31",
+          "worst_period": "2026-03-31",
+          "rising_periods": 4,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 2,
+            "below_mean": 1,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "annualNetIncome",
+          "n": 5,
+          "first": 353738798000.0,
+          "latest": 832987824000.0,
+          "min": 353738798000.0,
+          "max": 832987824000.0,
+          "min_period": "2022-03-31",
+          "max_period": "2026-03-31",
+          "mean": 637933676400.0,
+          "std": 190713287530.87628,
+          "latest_vs_mean_sigma": 1.0227611831630816,
+          "growth_mean_pct": 25.220029645310415,
+          "growth_volatility_pp": 22.073396263167517,
+          "best_period": "2023-03-31",
+          "worst_period": "2026-03-31",
+          "rising_periods": 4,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 2,
+            "below_mean": 1,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "annualCashAndCashEquivalents",
+          "n": 5,
+          "first": 5945234169000.0,
+          "latest": 6671134748000.0,
+          "min": 5369031044000.0,
+          "max": 6671134748000.0,
+          "min_period": "2023-03-31",
+          "max_period": "2026-03-31",
+          "mean": 6033913903800.0,
+          "std": 471659994549.75653,
+          "latest_vs_mean_sigma": 1.3510173675176473,
+          "growth_mean_pct": 3.2387382770939444,
+          "growth_volatility_pp": 9.135089947300662,
+          "best_period": "2024-03-31",
+          "worst_period": "2023-03-31",
+          "rising_periods": 3,
+          "falling_periods": 1,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 1,
+            "below_mean": 2,
+            "low_lt_minus1sd": 1
+          }
+        }
+      ]
+    },
+    "px_sbin": {
+      "rows": 4163,
+      "period_range": [
+        "2010-01-04",
+        "2026-11-13"
+      ],
+      "diagnostics": [
+        {
+          "series": "open",
+          "n": 4163,
+          "first": 227.5,
+          "latest": 1090.0,
+          "min": 147.0,
+          "max": 1232.0,
+          "min_period": "2014-02-17",
+          "max_period": "2026-02-24",
+          "mean": 399.42265065083444,
+          "std": 248.53682646732673,
+          "latest_vs_mean_sigma": 2.778571526662471,
+          "growth_mean_pct": 0.06054462890043779,
+          "growth_volatility_pp": 2.146936575951489,
+          "best_period": "2017-10-26",
+          "worst_period": "2020-03-13",
+          "rising_periods": 2086,
+          "falling_periods": 2043,
+          "regimes": {
+            "high_gt_1sd": 688,
+            "above_mean": 675,
+            "below_mean": 2788,
+            "low_lt_minus1sd": 12
+          }
+        },
+        {
+          "series": "high",
+          "n": 4163,
+          "first": 230.0,
+          "latest": 1090.699951171875,
+          "min": 148.49000549316406,
+          "max": 1234.699951171875,
+          "min_period": "2014-02-17",
+          "max_period": "2026-02-24",
+          "mean": 403.8477519115748,
+          "std": 250.4480303663757,
+          "latest_vs_mean_sigma": 2.742493914827428,
+          "growth_mean_pct": 0.05467825307625921,
+          "growth_volatility_pp": 1.8698072629268507,
+          "best_period": "2017-10-25",
+          "worst_period": "2024-06-05",
+          "rising_periods": 2094,
+          "falling_periods": 2035,
+          "regimes": {
+            "high_gt_1sd": 690,
+            "above_mean": 677,
+            "below_mean": 2778,
+            "low_lt_minus1sd": 18
+          }
+        },
+        {
+          "series": "low",
+          "n": 4163,
+          "first": 227.5,
+          "latest": 1074.1500244140625,
+          "min": 145.27000427246094,
+          "max": 1219.699951171875,
+          "min_period": "2013-08-28",
+          "max_period": "2026-02-24",
+          "mean": 394.4648916815841,
+          "std": 246.4479310088786,
+          "latest_vs_mean_sigma": 2.7579259032529344,
+          "growth_mean_pct": 0.05611465141877607,
+          "growth_volatility_pp": 1.9432319147634511,
+          "best_period": "2020-03-16",
+          "worst_period": "2024-06-04",
+          "rising_periods": 2176,
+          "falling_periods": 1960,
+          "regimes": {
+            "high_gt_1sd": 687,
+            "above_mean": 678,
+            "below_mean": 2788,
+            "low_lt_minus1sd": 10
+          }
+        },
+        {
+          "series": "close",
+          "n": 4163,
+          "first": 229.1199951171875,
+          "latest": 1080.0,
+          "min": 147.36000061035156,
+          "max": 1227.800048828125,
+          "min_period": "2014-02-17",
+          "max_period": "2026-02-23",
+          "mean": 399.0283941066869,
+          "std": 248.53403024524425,
+          "latest_vs_mean_sigma": 2.739953177524041,
+          "growth_mean_pct": 0.05752656773700572,
+          "growth_volatility_pp": 2.02067256597311,
+          "best_period": "2017-10-25",
+          "worst_period": "2024-06-04",
+          "rising_periods": 2139,
+          "falling_periods": 2007,
+          "regimes": {
+            "high_gt_1sd": 692,
+            "above_mean": 673,
+            "below_mean": 2786,
+            "low_lt_minus1sd": 12
+          }
+        },
+        {
+          "series": "adjclose",
+          "n": 4163,
+          "first": 185.35867309570312,
+          "latest": 1080.0,
+          "min": 127.1435317993164,
+          "max": 1206.0606689453125,
+          "min_period": "2014-02-17",
+          "max_period": "2026-02-23",
+          "mean": 368.97323837665135,
+          "std": 251.5337318485448,
+          "latest_vs_mean_sigma": 2.8267650481625144,
+          "growth_mean_pct": 0.0625971095887377,
+          "growth_volatility_pp": 2.0194590055754276,
+          "best_period": "2017-10-25",
+          "worst_period": "2024-06-04",
+          "rising_periods": 2148,
+          "falling_periods": 1998,
+          "regimes": {
+            "high_gt_1sd": 685,
+            "above_mean": 674,
+            "below_mean": 2804,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "volume",
+          "n": 4163,
+          "first": 11031470.0,
+          "latest": 15886106.0,
+          "min": 0.0,
+          "max": 262677081.0,
+          "min_period": "2014-04-24",
+          "max_period": "2017-10-25",
+          "mean": 22580750.618063897,
+          "std": 18168097.47358064,
+          "latest_vs_mean_sigma": -0.3684835260158085,
+          "growth_mean_pct": Infinity,
+          "growth_volatility_pp": NaN,
+          "best_period": "2014-04-25",
+          "worst_period": "2014-04-24",
+          "rising_periods": 2010,
+          "falling_periods": 2152,
+          "regimes": {
+            "high_gt_1sd": 444,
+            "above_mean": 895,
+            "below_mean": 2804,
+            "low_lt_minus1sd": 20
+          }
+        }
+      ]
+    }
+  }
+}

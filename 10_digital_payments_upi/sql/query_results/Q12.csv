@@ -1,0 +1,6 @@
+column_name,null_count,negative_count,row_count
+rtgs_volume_mn,3,0,3
+rtgs_value_crore,3,0,3
+aeps_volume_mn,1,0,3
+aeps_value_crore,1,0,3
+imps_volume_mn,1,0,3

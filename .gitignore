@@ -1,0 +1,11 @@
+# Local Python and browser artifacts
+__pycache__/
+*.py[cod]
+.openclaw/
+.env
+.env.*
+!.env.example
+*.db-journal
+*.sqlite-wal
+*.sqlite-shm
+.DS_Store

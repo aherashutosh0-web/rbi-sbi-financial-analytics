@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Money Stock & Monetary Aggregates Analytics (M1–M4) · RBI–SBI Financial Analytics</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --canvas: #F4F6FB; --surface: #FFFFFF; --navy: #1B2A4A;
+    --ink: #12233F; --ink-muted: #5A6B87; --accent: #2D4E8F;
+    --grid: #D6DEEC; --pos: #1B8A5A; --neg: #C44536;
+    --font: 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--canvas); color: var(--ink); font-family: var(--font); }
+  header { background: var(--navy); color: #fff; padding: 28px 40px 22px; }
+  header .eyebrow { font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase;
+    color: #2D4E8F; font-weight: 600; }
+  header h1 { font-size: 26px; font-weight: 650; margin-top: 6px; }
+  header .sub { color: #B9C4DA; font-size: 13.5px; margin-top: 8px; max-width: 900px; line-height: 1.5; }
+  .bar { height: 5px; background: linear-gradient(90deg, #2D4E8F 0%, #2D4E8F99 40%, transparent 100%); }
+  main { padding: 28px 40px 60px; max-width: 1400px; margin: 0 auto; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 16px; margin: 22px 0 30px; }
+  .kpi { background: var(--navy); border-radius: 12px; padding: 18px 20px;
+    box-shadow: 0 1px 3px rgba(18,35,63,.12); }
+  .kpi-label { color: #AEBBD3; font-size: 11.5px; letter-spacing: .8px; text-transform: uppercase; }
+  .kpi-value { color: #2D4E8F; font-size: 27px; font-weight: 700; margin-top: 8px; }
+  .kpi-unit { color: #8FA0BC; font-size: 13px; font-weight: 500; margin-left: 5px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .card { background: var(--surface); border: 1px solid var(--grid); border-radius: 12px;
+    padding: 20px 22px 14px; }
+  .card.full { grid-column: 1 / -1; }
+  .card h2 { font-size: 15px; font-weight: 650; color: var(--ink); margin-bottom: 4px; }
+  .card .note { font-size: 11.5px; color: var(--ink-muted); margin-bottom: 12px; }
+  .chart-box { position: relative; height: 330px; }
+  footer { padding: 22px 40px; color: var(--ink-muted); font-size: 11.5px;
+    border-top: 1px solid var(--grid); line-height: 1.7; }
+  footer b { color: var(--ink); }
+  .pill { display:inline-block; padding: 3px 10px; border-radius: 999px;
+    background: #2D4E8F22; color: var(--accent); font-size: 11px; font-weight: 600;
+    margin-left: 8px; vertical-align: middle; }
+  @media (max-width: 980px) { .grid { grid-template-columns: 1fr; } main { padding: 20px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">Macro-Finance · Monetary Economics</div>
+  <h1>Money Stock & Monetary Aggregates Analytics (M1–M4) <span class="pill">P02</span></h1>
+  <div class="sub">How is India's money supply expanding, and which components drive broad-money growth relevant to bank balance-sheet planning?</div>
+</header>
+<div class="bar"></div>
+<main>
+  <section class="kpis">
+        <div class="kpi">
+          <div class="kpi-label">M3 (₹ cr)</div>
+          <div class="kpi-value">31,453,126<span class="kpi-unit">₹ cr</span></div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">M3 YoY Growth</div>
+          <div class="kpi-value">2.30<span class="kpi-unit">%</span></div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Currency in Circulation</div>
+          <div class="kpi-value">4,065,488<span class="kpi-unit">₹ cr</span></div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Avg M3 Growth 5Y</div>
+          <div class="kpi-value">10.79<span class="kpi-unit">%</span></div>
+        </div></section>
+  <section class="grid">
+    <div class="card full">
+      <h2>Monetary Aggregates & Components (₹ crore)</h2>
+      <div class="note">Source: RBI Handbook of Statistics / market data · rendered with Chart.js</div>
+      <div class="chart-box"><canvas id="chart-0"></canvas></div>
+    </div>
+
+    <div class="card">
+      <h2>Monthly Broad Money M3 (₹ crore)</h2>
+      <div class="note">Source: RBI Handbook of Statistics / market data · rendered with Chart.js</div>
+      <div class="chart-box"><canvas id="chart-1"></canvas></div>
+    </div>
+
+    <div class="card full">
+      <h2>Sources of Money Stock (₹ crore)</h2>
+      <div class="note">Source: RBI Handbook of Statistics / market data · rendered with Chart.js</div>
+      <div class="chart-box"><canvas id="chart-2"></canvas></div>
+    </div></section>
+</main>
+<footer>
+  <b>Data sources:</b> Reserve Bank of India — Handbook of Statistics on Indian Economy (data.rbi.org.in); Yahoo Finance market data (SBIN.NS and benchmarks).<br>
+  <b>Design:</b> "Central Bank Blue" colour system — analogous blue structure + complementary amber accent
+  (60-30-10 rule, WCAG AA). See portfolio <b>COLOR_THEORY.md</b>.<br>
+  <b>Portfolio:</b> RBI–SBI Financial Analytics · 18 industrial-grade projects (SQL · Python · Excel · Dashboards)
+  · Generated for Ashutosh Aher — Business Analyst portfolio.
+</footer>
+<script>
+const PALETTE = ["#2D4E8F", "#2A9D8F", "#E9A23B", "#E76F51", "#7E57C2", "#B08968"];
+Chart.defaults.font.family = "'Segoe UI', Inter, sans-serif";
+Chart.defaults.color = "#5A6B87";
+Chart.defaults.borderColor = "#D6DEEC";
+const CHARTS = [{"type": "line", "title": "Monetary Aggregates & Components (\u20b9 crore)", "labels": ["1972-73", "1973-74", "1974-75", "1975-76", "1976-77", "1977-78", "1978-79", "1979-80", "1980-81", "1981-82", "1982-83", "1983-84", "1984-85", "1985-86", "1986-87", "1987-88", "1988-89", "1989-90", "1990-91", "1991-92", "1992-93", "1993-94", "1994-95", "1995-96", "1996-97", "1997-98", "1998-99", "1999-00", "2000-01", "2001-02", "2002-03", "2003-04", "2004-05", "2005-06", "2006-07", "2007-08", "2008-09", "2009-10", "2010-11", "2011-12", "2012-13", "2013-14", "2014-15", "2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21", "2021-22", "2022-23", "2023-24", "2024-25", "2025-26"], "series": [{"label": "Narrow Money (M1)", "data": [9700.0, 11200.0, 11975.0, 13325.0, 16024.0, 14388.0, 17292.0, 20000.0, 23424.0, 24937.0, 28535.0, 33398.0, 39915.0, 44095.0, 51516.0, 58555.0, 66786.0, 81060.0, 92892.0, 114406.0, 124066.0, 150778.0, 192257.0, 214835.0, 240615.0, 267845.0, 309068.0, 341796.0, 379433.0, 422824.0, 473558.0, 578694.0, 649766.0, 826389.0, 967925.0, 1155810.0, 1259671.0, 1489268.0, 1638345.0, 1737394.0, 1897526.0, 2059762.0, 2292404.0, 2602538.0, 2681957.0, 3267331.0, 3710464.0, 4125948.0, 4794299.0, 5307125.0, 5674795.0, 6091700.0, 6584081.0, 8042501.0]}, {"label": "Broad Money (M3)", "data": [15013.0, 17624.0, 19549.0, 22480.0, 27781.0, 32906.0, 40112.0, 47226.0, 55774.0, 62752.0, 73184.0, 86525.0, 102933.0, 119394.0, 141632.0, 164275.0, 193493.0, 230950.0, 265828.0, 317049.0, 364016.0, 431084.0, 527596.0, 599191.0, 696012.0, 821332.0, 980960.0, 1124174.0, 1313204.0, 1498336.0, 1717936.0, 2005654.0, 2245653.0, 2719493.0, 3310038.0, 4017855.0, 4794775.0, 5602698.0, 6504116.0, 7384831.0, 8389819.0, 9517386.0, 10550168.0, 11617615.0, 12791940.0, 13962587.0, 15432067.0, 16799963.0, 18844578.0, 20493729.0, 22343760.0, 24939860.0, 27286589.0, 31453126.0]}, {"label": "Demand Deposits", "data": [4204.0, 4826.0, 5553.0, 6543.0, 8030.0, 5687.0, 6895.0, 7955.0, 9587.0, 10295.0, 11690.0, 13504.0, 16648.0, 18747.0, 22825.0, 24599.0, 27763.0, 34162.0, 39170.0, 52423.0, 54480.0, 65952.0, 88193.0, 93233.0, 105334.0, 118725.0, 136388.0, 149681.0, 166270.0, 179199.0, 198757.0, 258626.0, 286998.0, 407423.0, 477604.0, 578372.0, 588688.0, 717970.0, 722856.0, 710902.0, 753225.0, 811978.0, 891632.0, 989834.0, 1396741.0, 1483712.0, 1626512.0, 1737692.0, 1995120.0, 2212992.0, 2320598.0, 2586888.0, 2840023.0, 3844879.0]}, {"label": "Time Deposits", "data": [5313.0, 6424.0, 7574.0, 9155.0, 11757.0, 18518.0, 22820.0, 27226.0, 32350.0, 37815.0, 44649.0, 53127.0, 63018.0, 75299.0, 90116.0, 105720.0, 126707.0, 149890.0, 172936.0, 202643.0, 239950.0, 280306.0, 335338.0, 384356.0, 455397.0, 553488.0, 671892.0, 782378.0, 933771.0, 1075512.0, 1244379.0, 1426960.0, 1595887.0, 1893104.0, 2342113.0, 2862046.0, 3535105.0, 4113430.0, 4865771.0, 5647437.0, 6492293.0, 7457624.0, 8257764.0, 9015077.0, 10109983.0, 10695255.0, 11721603.0, 12674016.0, 14050278.0, 15186605.0, 16668966.0, 18848160.0, 20702508.0, 23410625.0]}], "accent": null}, {"type": "bar", "title": "Monthly Broad Money M3 (\u20b9 crore)", "labels": ["2022-05", "2022-06", "2022-07", "2022-08", "2022-09", "2022-10", "2022-11", "2022-12", "2023-05", "2023-06", "2023-07", "2023-08", "2023-09", "2023-10", "2023-11", "2023-12", "2024-05", "2024-06", "2024-07", "2024-08", "2024-09", "2024-10", "2024-11", "2024-12", "2025-05", "2025-06", "2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12", "2026-05"], "series": [{"label": "M3", "data": [20682307.0, 20663817.0, 21032348.0, 21051423.0, 21072896.0, 21301949.0, 21399921.0, 21859235.0, 22766810.0, 23424748.0, 23409955.0, 23472705.0, 23504298.0, 23739933.0, 23934978.0, 24377277.0, 25610093.0, 25791104.0, 25673513.0, 25783048.0, 25954324.0, 26289282.0, 26517391.0, 26579464.0, 27989937.0, 28230456.0, 28139873.0, 28308381.0, 28350221.0, 28997506.0, 29136157.0, 29798552.0, 31362050.0]}], "accent": null}, {"type": "line", "title": "Sources of Money Stock (\u20b9 crore)", "labels": ["1974-75", "1975-76", "1976-77", "1977-78", "1978-79", "1979-80", "1980-81", "1981-82", "1982-83", "1983-84", "1984-85", "1985-86", "1986-87", "1987-88", "1988-89", "1989-90", "1990-91", "1991-92", "1992-93", "1993-94", "1994-95", "1995-96", "1996-97", "1997-98", "1998-99", "1999-00", "2000-01", "2001-02", "2002-03", "2003-04", "2004-05", "2005-06", "2006-07", "2007-08", "2008-09", "2009-10", "2010-11", "2011-12", "2012-13", "2013-14", "2014-15", "2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21", "2021-22", "2022-23", "2023-24", "2024-25", "2025-26", "1974-75", "1975-76", "1976-77", "1977-78", "1978-79", "1979-80", "1980-81", "1981-82", "1982-83", "1983-84", "1984-85", "1985-86", "1986-87", "1987-88", "1988-89", "1989-90", "1990-91", "1991-92", "1992-93", "1993-94", "1994-95", "1995-96", "1996-97", "1997-98", "1998-99", "1999-00", "2000-01", "2001-02", "2002-03", "2003-04", "2004-05", "2005-06", "2006-07", "2007-08", "2008-09", "2009-10", "2010-11", "2011-12", "2012-13", "2013-14", "2014-15", "2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21", "2021-22", "2022-23", "2023-24", "2024-25", "2025-26"], "series": [{"label": "Net Bank Credit to Govt", "data": [9999.0, 10629.0, 11804.0, 13727.0, 15930.0, 20014.0, 25718.0, 30633.0, 35257.0, 40642.0, 50343.0, 58321.0, 72020.0, 84370.0, 96475.0, 117151.0, 140193.0, 158263.0, 176238.0, 203918.0, 222419.0, 257778.0, 288620.0, 330597.0, 386677.0, 441378.0, 511955.0, 589565.0, 676523.0, 742904.0, 752436.0, 759416.0, 827626.0, 899518.0, 1277333.0, 1669186.0, 1983896.0, 2373731.0, 2709011.0, 3044870.0, 3007394.0, 3238484.0, 3856607.0, 4001399.0, 4388490.0, 4960362.0, 5850374.0, 6477629.0, 7165533.0, 7603571.0, 8510825.0, 9369275.0, 531.0, 556.0, 568.0, 593.0, 603.0, 592.0, 618.0, 657.0, 682.0, 720.0, 778.0, 939.0, 1192.0, 1380.0, 1475.0, 1555.0, 1621.0, 1704.0, 1824.0, 1990.0, 2379.0, 2503.0, 2918.0, 3352.0, 3846.0, 4578.0, 5354.0, 6366.0, 7071.0, 7296.0, 7448.0, 7656.0, 8161.0, 9224.0, 10054.0, 11270.0, 12724.0, 13444.0, 15340.0, 17339.0, 19429.0, 21905.0, 25085.0, 25652.0, 25887.0, 26348.0, 26913.0, 28013.0, 30285.0, 33432.0, 36632.0, 40818.0]}, {"label": "Bank Credit to Commercial Sector", "data": [12730.0, 15614.0, 18851.0, 21222.0, 25532.0, 31011.0, 36641.0, 43462.0, 51162.0, 60726.0, 70953.0, 82803.0, 94741.0, 107487.0, 127882.0, 151704.0, 171769.0, 187993.0, 220135.0, 237774.0, 292723.0, 344648.0, 376307.0, 433310.0, 495990.0, 586564.0, 679218.0, 759647.0, 898981.0, 1016151.0, 1275912.0, 1688681.0, 2128862.0, 2578990.0, 3014893.0, 3491409.0, 4236676.0, 4992338.0, 5667867.0, 6445296.0, 7049724.0, 7803069.0, 8411492.0, 9213716.0, 10382719.0, 11038644.0, 11668466.0, 12616520.0, 14429636.0, 17202832.0, 19068129.0, 22226641.0, 4125.0, 5257.0, 5971.0, 7081.0, 7292.0, 9734.0, 11934.0, 14768.0, 15745.0, 17208.0, 22274.0, 26542.0, 31136.0, 34634.0, 39139.0, 46278.0, 58336.0, 52137.0, 58624.0, 67210.0, 68958.0, 87880.0, 77330.0, 84022.0, 83406.0, 113994.0, 133155.0, 168286.0, 258358.0, 287289.0, 439402.0, 462458.0, 567790.0, 765008.0, 859681.0, 850630.0, 1122523.0, 1538474.0, 1639074.0, 1914099.0, 1777052.0, 1979768.0, 2059661.0, 2200683.0, 2436082.0, 3026661.0, 3280260.0, 3482737.0, 4193719.0, 5467477.0, 6477524.0, 7309880.0]}, {"label": "Net RBI Credit to Govt", "data": [6620.0, 6331.0, 7147.0, 6887.0, 9077.0, 11727.0, 15278.0, 18486.0, 21853.0, 25802.0, 31857.0, 38047.0, 45138.0, 51697.0, 58200.0, 72013.0, 86758.0, 92266.0, 96523.0, 96783.0, 98913.0, 118768.0, 120702.0, 133617.0, 145416.0, 139829.0, 146534.0, 141384.0, 112985.0, 36920.0, -23258.0, 5160.0, 2136.0, -114636.0, 61761.0, 211581.0, 394035.0, 534413.0, 590499.0, 697643.0, 361038.0, 424562.0, 619591.0, 474286.0, 800473.0, 989741.0, 1096345.0, 1448972.0, 1450376.0, 1186655.0, 1475460.0, 2046623.0, 369.0, 924.0, 2599.0, 4532.0, 5431.0, 5388.0, 4775.0, 2706.0, 1729.0, 1624.0, 2899.0, 3741.0, 4621.0, 5416.0, 6201.0, 6068.0, 7983.0, 18838.0, 22647.0, 51422.0, 74720.0, 74092.0, 94817.0, 115890.0, 137954.0, 165880.0, 197187.0, 263979.0, 358249.0, 484419.0, 612795.0, 672986.0, 866152.0, 1236131.0, 1280108.0, 1231944.0, 1328569.0, 1472207.0, 1558075.0, 1802557.0, 2127302.0, 2383679.0, 2397396.0, 2760988.0, 2848799.0, 3590636.0, 4199639.0, 4442720.0, 4587615.0, 5241083.0, 5550947.0, 6360229.0]}], "accent": null}];
+CHARTS.forEach((c, i) => {
+  const el = document.getElementById('chart-' + i);
+  if (!el) return;
+  const isBar = c.type === 'bar' || c.type === 'hbar';
+  const cfg = {
+    type: c.type === 'hbar' ? 'bar' : (c.type === 'area' ? 'line' : c.type),
+    data: {
+      labels: c.labels,
+      datasets: c.series.map((s, j) => ({
+        label: s.label,
+        data: s.data,
+        borderColor: PALETTE[j % PALETTE.length],
+        backgroundColor: isBar ? PALETTE[j % PALETTE.length] + 'B3' : PALETTE[j % PALETTE.length] + '26',
+        borderWidth: 2, pointRadius: 0, pointHitRadius: 8,
+        fill: c.type === 'area' && j === 0 ? 'origin' : false,
+        tension: 0.25, borderRadius: isBar ? 4 : 0,
+      }))
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      indexAxis: c.type === 'hbar' ? 'y' : 'x',
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { position: 'top', align: 'start',
+          labels: { boxWidth: 12, boxHeight: 12, usePointStyle: true, pointStyle: 'rectRounded' } },
+        tooltip: { backgroundColor: "#1B2A4A", padding: 10, cornerRadius: 8,
+          titleFont: { size: 12 }, bodyFont: { size: 12 } }
+      },
+      scales: {
+        x: { grid: { color: "#D6DEEC", drawTicks: false }, ticks: { maxTicksLimit: 12, font: { size: 11 } } },
+        y: { grid: { color: "#D6DEEC", drawTicks: false }, ticks: { font: { size: 11 } } }
+      }
+    }
+  };
+  new Chart(el, cfg);
+});
+</script>
+</body>
+</html>

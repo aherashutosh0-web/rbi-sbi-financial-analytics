@@ -1,0 +1,187 @@
+{
+  "project": "P15",
+  "title": "SBI Quarterly Performance Tracker",
+  "kpis": [
+    {
+      "label": "Latest Quarterly Revenue (\u20b9)",
+      "unit": "\u20b9",
+      "value": 705974800000.0
+    },
+    {
+      "label": "Latest Quarterly Net Income (\u20b9)",
+      "unit": "\u20b9",
+      "value": 253611600000.0
+    },
+    {
+      "label": "QoQ Revenue Growth",
+      "unit": "%",
+      "value": -0.01750230428984101
+    },
+    {
+      "label": "Avg Quarterly Net Margin",
+      "unit": "%",
+      "value": 32.0552288115876
+    }
+  ],
+  "datasets": {
+    "fin_sbin_quarterly": {
+      "rows": 6,
+      "period_range": [
+        "2025-06-30",
+        "2026-09-30"
+      ],
+      "diagnostics": [
+        {
+          "series": "quarterlyInterestIncome",
+          "n": 5,
+          "first": 1279034400000.0,
+          "latest": 1410733400000.0,
+          "min": 1279034400000.0,
+          "max": 1410733400000.0,
+          "min_period": "2025-09-30",
+          "max_period": "2026-09-30",
+          "mean": 1333774220000.0,
+          "std": 52544664356.069496,
+          "latest_vs_mean_sigma": 1.4646430982694127,
+          "growth_mean_pct": 2.489966831269075,
+          "growth_volatility_pp": 1.6159645562874358,
+          "best_period": "2026-06-30",
+          "worst_period": "2026-03-31",
+          "rising_periods": 4,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 1,
+            "below_mean": 2,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "quarterlyTotalRevenue",
+          "n": 5,
+          "first": 674941400000.0,
+          "latest": 705974800000.0,
+          "min": 674941400000.0,
+          "max": 718551100000.0,
+          "min_period": "2025-09-30",
+          "max_period": "2026-06-30",
+          "mean": 698709120000.0,
+          "std": 20166296154.648727,
+          "latest_vs_mean_sigma": 0.3602882722876763,
+          "growth_mean_pct": 1.2395203418093692,
+          "growth_volatility_pp": 5.417394523878315,
+          "best_period": "2025-12-31",
+          "worst_period": "2026-03-31",
+          "rising_periods": 2,
+          "falling_periods": 2,
+          "regimes": {
+            "high_gt_1sd": 0,
+            "above_mean": 3,
+            "below_mean": 1,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "quarterlyStockholdersEquity",
+          "n": 5,
+          "first": 5204755700000.0,
+          "latest": 6715922400000.0,
+          "min": 5204755700000.0,
+          "max": 6715922400000.0,
+          "min_period": "2025-06-30",
+          "max_period": "2026-09-30",
+          "mean": 6004308618800.0,
+          "std": 547921603929.95703,
+          "latest_vs_mean_sigma": 1.2987510915721592,
+          "growth_mean_pct": 6.688287459260989,
+          "growth_volatility_pp": 5.566575757881015,
+          "best_period": "2025-12-31",
+          "worst_period": "2026-03-31",
+          "rising_periods": 4,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 1,
+            "below_mean": 2,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "quarterlyInterestExpense",
+          "n": 5,
+          "first": 782664600000.0,
+          "latest": 842725800000.0,
+          "min": 782664600000.0,
+          "max": 842725800000.0,
+          "min_period": "2025-06-30",
+          "max_period": "2026-09-30",
+          "mean": 807045180000.0,
+          "std": 25156657617.159714,
+          "latest_vs_mean_sigma": 1.4183370677852587,
+          "growth_mean_pct": 1.8692637419620073,
+          "growth_volatility_pp": 0.9936630974713522,
+          "best_period": "2026-06-30",
+          "worst_period": "2025-12-31",
+          "rising_periods": 4,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 1,
+            "below_mean": 3,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "quarterlyNetIncome",
+          "n": 5,
+          "first": 212014700000.0,
+          "latest": 253611600000.0,
+          "min": 196428700000.0,
+          "max": 253611600000.0,
+          "min_period": "2026-03-31",
+          "max_period": "2026-09-30",
+          "mean": 223271220000.0,
+          "std": 23391864120.39451,
+          "latest_vs_mean_sigma": 1.2970484029764577,
+          "growth_mean_pct": 5.156191670203733,
+          "growth_volatility_pp": 12.913980719606421,
+          "best_period": "2026-06-30",
+          "worst_period": "2026-03-31",
+          "rising_periods": 3,
+          "falling_periods": 1,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 1,
+            "below_mean": 2,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "quarterlyTotalAssets",
+          "n": 5,
+          "first": 74442914300000.0,
+          "latest": 86585388800000.0,
+          "min": 74442914300000.0,
+          "max": 86585388800000.0,
+          "min_period": "2025-06-30",
+          "max_period": "2026-09-30",
+          "mean": 81417395808400.0,
+          "std": 4801508885069.466,
+          "latest_vs_mean_sigma": 1.0763268620974826,
+          "growth_mean_pct": 3.8690414345078694,
+          "growth_volatility_pp": 2.3080733177377386,
+          "best_period": "2025-12-31",
+          "worst_period": "2026-06-30",
+          "rising_periods": 4,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 2,
+            "below_mean": 1,
+            "low_lt_minus1sd": 1
+          }
+        }
+      ]
+    }
+  }
+}

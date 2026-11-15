@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>India Forex Reserves Monitor (Annual · Monthly · Weekly) · RBI–SBI Financial Analytics</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --canvas: #F4F6FB; --surface: #FFFFFF; --navy: #1B2A4A;
+    --ink: #12233F; --ink-muted: #5A6B87; --accent: #E9A23B;
+    --grid: #D6DEEC; --pos: #1B8A5A; --neg: #C44536;
+    --font: 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--canvas); color: var(--ink); font-family: var(--font); }
+  header { background: var(--navy); color: #fff; padding: 28px 40px 22px; }
+  header .eyebrow { font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase;
+    color: #E9A23B; font-weight: 600; }
+  header h1 { font-size: 26px; font-weight: 650; margin-top: 6px; }
+  header .sub { color: #B9C4DA; font-size: 13.5px; margin-top: 8px; max-width: 900px; line-height: 1.5; }
+  .bar { height: 5px; background: linear-gradient(90deg, #E9A23B 0%, #E9A23B99 40%, transparent 100%); }
+  main { padding: 28px 40px 60px; max-width: 1400px; margin: 0 auto; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 16px; margin: 22px 0 30px; }
+  .kpi { background: var(--navy); border-radius: 12px; padding: 18px 20px;
+    box-shadow: 0 1px 3px rgba(18,35,63,.12); }
+  .kpi-label { color: #AEBBD3; font-size: 11.5px; letter-spacing: .8px; text-transform: uppercase; }
+  .kpi-value { color: #E9A23B; font-size: 27px; font-weight: 700; margin-top: 8px; }
+  .kpi-unit { color: #8FA0BC; font-size: 13px; font-weight: 500; margin-left: 5px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .card { background: var(--surface); border: 1px solid var(--grid); border-radius: 12px;
+    padding: 20px 22px 14px; }
+  .card.full { grid-column: 1 / -1; }
+  .card h2 { font-size: 15px; font-weight: 650; color: var(--ink); margin-bottom: 4px; }
+  .card .note { font-size: 11.5px; color: var(--ink-muted); margin-bottom: 12px; }
+  .chart-box { position: relative; height: 330px; }
+  footer { padding: 22px 40px; color: var(--ink-muted); font-size: 11.5px;
+    border-top: 1px solid var(--grid); line-height: 1.7; }
+  footer b { color: var(--ink); }
+  .pill { display:inline-block; padding: 3px 10px; border-radius: 999px;
+    background: #E9A23B22; color: var(--accent); font-size: 11px; font-weight: 600;
+    margin-left: 8px; vertical-align: middle; }
+  @media (max-width: 980px) { .grid { grid-template-columns: 1fr; } main { padding: 20px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">External Sector · Reserves</div>
+  <h1>India Forex Reserves Monitor (Annual · Monthly · Weekly) <span class="pill">P08</span></h1>
+  <div class="sub">How strong is the reserve buffer — composition, trend and import cover — and what does it imply for rupee stability?</div>
+</header>
+<div class="bar"></div>
+<main>
+  <section class="kpis">
+        <div class="kpi">
+          <div class="kpi-label">Total Reserves (US$ mn)</div>
+          <div class="kpi-value">672,587<span class="kpi-unit">US$ mn</span></div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">FCAs (US$ mn)</div>
+          <div class="kpi-value">541,217<span class="kpi-unit">US$ mn</span></div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Gold (US$ mn)</div>
+          <div class="kpi-value">107,930<span class="kpi-unit">US$ mn</span></div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Reserves YoY Growth</div>
+          <div class="kpi-value">-0.01<span class="kpi-unit">%</span></div>
+        </div></section>
+  <section class="grid">
+    <div class="card full">
+      <h2>Forex Reserves Composition (US$ million)</h2>
+      <div class="note">Source: RBI Handbook of Statistics / market data · rendered with Chart.js</div>
+      <div class="chart-box"><canvas id="chart-0"></canvas></div>
+    </div>
+
+    <div class="card">
+      <h2>Total Reserves — Weekly (US$ million)</h2>
+      <div class="note">Source: RBI Handbook of Statistics / market data · rendered with Chart.js</div>
+      <div class="chart-box"><canvas id="chart-1"></canvas></div>
+    </div>
+
+    <div class="card full">
+      <h2>Reserves in INR & SDR Terms</h2>
+      <div class="note">Source: RBI Handbook of Statistics / market data · rendered with Chart.js</div>
+      <div class="chart-box"><canvas id="chart-2"></canvas></div>
+    </div></section>
+</main>
+<footer>
+  <b>Data sources:</b> Reserve Bank of India — Handbook of Statistics on Indian Economy (data.rbi.org.in); Yahoo Finance market data (SBIN.NS and benchmarks).<br>
+  <b>Design:</b> "Central Bank Blue" colour system — analogous blue structure + complementary amber accent
+  (60-30-10 rule, WCAG AA). See portfolio <b>COLOR_THEORY.md</b>.<br>
+  <b>Portfolio:</b> RBI–SBI Financial Analytics · 18 industrial-grade projects (SQL · Python · Excel · Dashboards)
+  · Generated for Ashutosh Aher — Business Analyst portfolio.
+</footer>
+<script>
+const PALETTE = ["#2D4E8F", "#2A9D8F", "#E9A23B", "#E76F51", "#7E57C2", "#B08968"];
+Chart.defaults.font.family = "'Segoe UI', Inter, sans-serif";
+Chart.defaults.color = "#5A6B87";
+Chart.defaults.borderColor = "#D6DEEC";
+const CHARTS = [{"type": "area", "title": "Forex Reserves Composition (US$ million)", "labels": ["2023-03", "2023-04", "2023-05", "2023-06", "2023-07", "2023-08", "2023-09", "2023-10", "2023-11", "2023-12", "2024-01", "2024-02", "2024-03", "2024-04", "2024-05", "2024-06", "2024-07", "2024-08", "2024-09", "2024-10", "2024-11", "2024-12", "2025-01", "2025-02", "2025-03", "2025-04", "2025-05", "2025-06", "2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12", "2026-01", "2026-02", "2026-03", "2026-04", "2026-05"], "series": [{"label": "Foreign Currency Assets", "data": [509691.0, 520930.0, 522422.0, 527979.0, 537152.0, 529911.0, 521366.0, 519281.0, 533424.0, 551239.0, 548939.0, 554152.0, 570950.0, 561778.0, 572564.0, 572881.0, 589316.0, 597415.0, 617075.0, 589849.0, 569960.0, 547454.0, 537684.0, 543350.0, 567557.0, 581195.0, 584899.0, 591354.0, 582611.0, 584530.0, 579181.0, 564591.0, 557789.0, 552897.0, 560945.0, 573125.0, 552283.0, 551825.0, 546923.0]}, {"label": "Gold", "data": [45200.0, 45585.0, 44999.0, 43832.0, 45109.0, 45060.0, 43342.0, 46449.0, 47596.0, 47956.0, 47967.0, 48048.0, 52675.0, 55888.0, 56501.0, 56528.0, 58525.0, 61742.0, 65749.0, 69751.0, 67212.0, 66148.0, 70893.0, 73272.0, 78176.0, 84118.0, 83418.0, 83308.0, 84137.0, 87316.0, 97465.0, 101726.0, 106740.0, 111262.0, 126904.0, 131630.0, 115395.0, 115216.0, 115823.0]}, {"label": "SDRs", "data": [18392.0, 18410.0, 18198.0, 18239.0, 18364.0, 18197.0, 17990.0, 17945.0, 18295.0, 18365.0, 18207.0, 18164.0, 18132.0, 18049.0, 18118.0, 18014.0, 18156.0, 18451.0, 18566.0, 18219.0, 18007.0, 17882.0, 17889.0, 17998.0, 18169.0, 18600.0, 18597.0, 18825.0, 18660.0, 18763.0, 18775.0, 18644.0, 18628.0, 18795.0, 18953.0, 18866.0, 18621.0, 18789.0, 18776.0]}, {"label": "Reserve Tranche", "data": [5165.0, 5172.0, 5097.0, 5002.0, 5184.0, 5073.0, 5016.0, 4787.0, 4856.0, 4892.0, 4849.0, 4801.0, 4662.0, 4486.0, 4326.0, 4573.0, 4619.0, 4622.0, 4391.0, 4311.0, 4254.0, 4217.0, 4141.0, 4078.0, 4423.0, 4515.0, 4395.0, 4630.0, 4701.0, 4749.0, 4668.0, 4772.0, 4772.0, 4781.0, 4746.0, 4873.0, 4808.0, 4863.0, 4826.0]}], "accent": null}, {"type": "line", "title": "Total Reserves \u2014 Weekly (US$ million)", "labels": ["2024-04-05", "2024-04-12", "2024-04-19", "2024-04-26", "2024-05-03", "2024-05-10", "2024-05-17", "2024-05-24", "2024-05-31", "2024-06-07", "2024-06-14", "2024-06-21", "2024-06-28", "2024-07-05", "2024-07-12", "2024-07-19", "2024-07-26", "2024-08-02", "2024-08-09", "2024-08-16", "2024-08-23", "2024-08-30", "2024-09-06", "2024-09-13", "2024-09-20", "2024-09-27", "2024-10-04", "2024-10-11", "2024-10-18", "2024-10-25", "2024-11-01", "2024-11-08", "2024-11-15", "2024-11-22", "2024-11-29", "2024-12-06", "2024-12-13", "2024-12-20", "2024-12-27", "2025-01-03", "2025-01-10", "2025-01-17", "2025-01-24", "2025-01-31", "2025-02-07", "2025-02-14", "2025-02-21", "2025-02-28", "2025-03-07", "2025-03-14", "2025-03-21", "2025-03-28", "2025-04-04", "2025-04-11", "2025-04-18", "2025-04-25", "2025-05-02", "2025-05-09", "2025-05-16", "2025-05-23", "2025-05-30", "2025-06-06", "2025-06-13", "2025-06-20", "2025-06-27", "2025-07-04", "2025-07-11", "2025-07-18", "2025-07-25", "2025-08-01", "2025-08-08", "2025-08-15", "2025-08-22", "2025-08-29", "2025-09-05", "2025-09-12", "2025-09-19", "2025-09-26", "2025-10-03", "2025-10-10", "2025-10-17", "2025-10-24", "2025-10-31", "2025-11-07", "2025-11-14", "2025-11-21", "2025-11-28", "2025-12-05", "2025-12-12", "2025-12-19", "2025-12-26", "2026-01-02", "2026-01-09", "2026-01-16", "2026-01-23", "2026-01-30", "2026-02-06", "2026-02-13", "2026-02-20", "2026-02-27", "2026-03-06", "2026-03-13", "2026-03-20", "2026-03-27", "2026-04-03", "2026-04-10", "2026-04-17", "2026-04-24", "2026-05-01", "2026-05-08", "2026-05-15", "2026-05-22", "2026-05-29", "2026-06-05", "2026-06-12", "2026-06-19"], "series": [{"label": "Total Reserves", "data": [648562.0, 643162.0, 640334.0, 637922.0, 641590.0, 644151.0, 648700.0, 646673.0, 651510.0, 655817.0, 652895.0, 653711.0, 651997.0, 657155.0, 666854.0, 670857.0, 667386.0, 674919.0, 670119.0, 674664.0, 681688.0, 683987.0, 689235.0, 689458.0, 692296.0, 704885.0, 701176.0, 690430.0, 688267.0, 684805.0, 682130.0, 675653.0, 657892.0, 656582.0, 658091.0, 654857.0, 652869.0, 644391.0, 640279.0, 634585.0, 625871.0, 623983.0, 629557.0, 630607.0, 638261.0, 635721.0, 640479.0, 638698.0, 653966.0, 654271.0, 658800.0, 665396.0, 676268.0, 677835.0, 686145.0, 688129.0, 686064.0, 690617.0, 685729.0, 692721.0, 691485.0, 696656.0, 698950.0, 697935.0, 702784.0, 699736.0, 696672.0, 695489.0, 698192.0, 688871.0, 693618.0, 695106.0, 690720.0, 694230.0, 698268.0, 702966.0, 702570.0, 700236.0, 699960.0, 697784.0, 702280.0, 695355.0, 689733.0, 687034.0, 692576.0, 688104.0, 686227.0, 687260.0, 688949.0, 693318.0, 696610.0, 686801.0, 687193.0, 701360.0, 709413.0, 723774.0, 717064.0, 725727.0, 723608.0, 728494.0, 716810.0, 709759.0, 698346.0, 688058.0, 697121.0, 700946.0, 703308.0, 698487.0, 690693.0, 696988.0, 688894.0, 681384.0, 682321.0, 681610.0, 671625.0, 672587.0]}], "accent": null}, {"type": "line", "title": "Reserves in INR & SDR Terms", "labels": ["1968-69", "1969-70", "1970-71", "1971-72", "1972-73", "1973-74", "1974-75", "1975-76", "1976-77", "1977-78", "1978-79", "1979-80", "1980-81", "1981-82", "1982-83", "1983-84", "1984-85", "1985-86", "1986-87", "1987-88", "1988-89", "1989-90", "1990-91", "1991-92", "1992-93", "1993-94", "1994-95", "1995-96", "1996-97", "1997-98", "1998-99", "1999-00", "2000-01", "2001-02", "2002-03", "2003-04", "2004-05", "2005-06", "2006-07", "2007-08", "2008-09", "2009-10", "2010-11", "2011-12", "2012-13", "2013-14", "2014-15", "2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21", "2021-22", "2022-23", "2023-24", "2024-25", "2025-26"], "series": [{"label": "Reserves (\u20b9 cr)", "data": [577.0, 821.0, 733.0, 857.0, 888.0, 994.0, 1022.0, 1886.0, 3243.0, 4863.0, 5821.0, 5934.0, 5545.0, 4025.0, 4782.0, 5972.0, 7244.0, 7819.0, 8151.0, 7686.0, 7040.0, 6252.0, 11416.0, 23850.0, 30744.0, 60420.0, 79780.0, 74384.0, 94932.0, 115905.0, 138005.0, 165913.0, 197204.0, 264036.0, 361470.0, 490129.0, 619116.0, 676387.0, 868222.0, 1237965.0, 1283865.0, 1259665.0, 1361014.0, 1506132.0, 1588420.0, 1828380.0, 2137640.0, 2378740.0, 2398200.0, 2760850.0, 2855882.0, 3602155.0, 4218953.0, 4598819.0, 4754265.0, 5391256.0, 5712141.0, 6553861.0]}, {"label": "SDRs (US$ mn)", "data": [null, 123.0, 148.0, 269.0, 297.0, 296.0, 293.0, 234.0, 217.0, 200.0, 470.0, 662.0, 603.0, 473.0, 291.0, 230.0, 145.0, 131.0, 179.0, 97.0, 103.0, 107.0, 102.0, 90.0, 18.0, 108.0, 7.0, 82.0, 2.0, 1.0, 8.0, 4.0, 2.0, 10.0, 4.0, 2.0, 5.0, 3.0, 2.0, 18.0, 1.0, 5006.0, 4569.0, 4469.0, 4328.0, 4464.0, 3985.0, 1502.0, 1447.0, 1540.0, 1457.0, 1433.0, 1486.0, 18891.0, 18392.0, 18132.0, 18169.0, 18621.0]}], "accent": null}];
+CHARTS.forEach((c, i) => {
+  const el = document.getElementById('chart-' + i);
+  if (!el) return;
+  const isBar = c.type === 'bar' || c.type === 'hbar';
+  const cfg = {
+    type: c.type === 'hbar' ? 'bar' : (c.type === 'area' ? 'line' : c.type),
+    data: {
+      labels: c.labels,
+      datasets: c.series.map((s, j) => ({
+        label: s.label,
+        data: s.data,
+        borderColor: PALETTE[j % PALETTE.length],
+        backgroundColor: isBar ? PALETTE[j % PALETTE.length] + 'B3' : PALETTE[j % PALETTE.length] + '26',
+        borderWidth: 2, pointRadius: 0, pointHitRadius: 8,
+        fill: c.type === 'area' && j === 0 ? 'origin' : false,
+        tension: 0.25, borderRadius: isBar ? 4 : 0,
+      }))
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      indexAxis: c.type === 'hbar' ? 'y' : 'x',
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { position: 'top', align: 'start',
+          labels: { boxWidth: 12, boxHeight: 12, usePointStyle: true, pointStyle: 'rectRounded' } },
+        tooltip: { backgroundColor: "#1B2A4A", padding: 10, cornerRadius: 8,
+          titleFont: { size: 12 }, bodyFont: { size: 12 } }
+      },
+      scales: {
+        x: { grid: { color: "#D6DEEC", drawTicks: false }, ticks: { maxTicksLimit: 12, font: { size: 11 } } },
+        y: { grid: { color: "#D6DEEC", drawTicks: false }, ticks: { font: { size: 11 } } }
+      }
+    }
+  };
+  new Chart(el, cfg);
+});
+</script>
+</body>
+</html>

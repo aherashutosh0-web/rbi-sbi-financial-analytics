@@ -1,0 +1,6 @@
+column_name,null_count,negative_count,row_count
+call_money_rate,0,0,18
+savings_rate,18,0,18
+term_deposit_1_3y,18,0,18
+term_deposit_3_5y,18,0,18
+term_deposit_above_5y,18,0,18

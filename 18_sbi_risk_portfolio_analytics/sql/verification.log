@@ -1,0 +1,16 @@
+verification — P18 SBI Risk & Portfolio Analytics — VaR, Beta & Correlation
+==========================================================================================
+  PASS Q01  (1 rows × 5 cols)
+  PASS Q02  (1 rows × 20 cols)
+  PASS Q03  (4163 rows × 4 cols)
+  PASS Q04  (4163 rows × 5 cols)
+  PASS Q05  (4163 rows × 3 cols)
+  PASS Q06  (4163 rows × 3 cols)
+  PASS Q07  (10 rows × 4 cols)
+  PASS Q08  (1 rows × 5 cols)
+  PASS Q09  (1 rows × 6 cols)
+  PASS Q10  (4142 rows × 4 cols)
+  PASS Q11  (4163 rows × 4 cols)
+  PASS Q12  (5 rows × 4 cols)
+  PASS Q13  (1 rows × 6 cols)
+  PASS Q14  (4163 rows × 6 cols)

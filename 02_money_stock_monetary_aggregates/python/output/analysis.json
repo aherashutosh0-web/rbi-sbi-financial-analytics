@@ -1,0 +1,505 @@
+{
+  "project": "P02",
+  "title": "Money Stock & Monetary Aggregates Analytics (M1\u2013M4)",
+  "kpis": [
+    {
+      "label": "M3 (\u20b9 cr)",
+      "unit": "\u20b9 cr",
+      "value": 31453126.0
+    },
+    {
+      "label": "M3 YoY Growth",
+      "unit": "%",
+      "value": 2.3048072233279178
+    },
+    {
+      "label": "Currency in Circulation",
+      "unit": "\u20b9 cr",
+      "value": 4065488.0
+    },
+    {
+      "label": "Avg M3 Growth 5Y",
+      "unit": "%",
+      "value": 10.788703389904274
+    }
+  ],
+  "datasets": {
+    "money_stock_annual": {
+      "rows": 54,
+      "period_range": [
+        "1972-73",
+        "2025-26"
+      ],
+      "diagnostics": [
+        {
+          "series": "currency_in_circulation",
+          "n": 54,
+          "first": 5680.0,
+          "latest": 4165573.0,
+          "min": 5680.0,
+          "max": 4165573.0,
+          "min_period": "1972-73",
+          "max_period": "2025-26",
+          "mean": 779668.6851851852,
+          "std": 1135299.561745075,
+          "latest_vs_mean_sigma": 2.9823884628391144,
+          "growth_mean_pct": 13.487587622326021,
+          "growth_volatility_pp": 7.015011076092,
+          "best_period": "2017-18",
+          "worst_period": "2016-17",
+          "rising_periods": 52,
+          "falling_periods": 1,
+          "regimes": {
+            "high_gt_1sd": 8,
+            "above_mean": 9,
+            "below_mean": 37,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "cash_with_banks",
+          "n": 54,
+          "first": 242.0,
+          "latest": 100085.0,
+          "min": 242.0,
+          "max": 102085.0,
+          "min_period": "1972-73",
+          "max_period": "2022-23",
+          "mean": 27212.333333333332,
+          "std": 35543.907907273715,
+          "latest_vs_mean_sigma": 2.0502153802776983,
+          "growth_mean_pct": 12.42938696886164,
+          "growth_volatility_pp": 9.520728160755281,
+          "best_period": "2005-06",
+          "worst_period": "2024-25",
+          "rising_periods": 48,
+          "falling_periods": 5,
+          "regimes": {
+            "high_gt_1sd": 11,
+            "above_mean": 6,
+            "below_mean": 37,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "currency_with_public",
+          "n": 54,
+          "first": 5438.0,
+          "latest": 4065488.0,
+          "min": 5438.0,
+          "max": 4065488.0,
+          "min_period": "1972-73",
+          "max_period": "2025-26",
+          "mean": 752456.2407407408,
+          "std": 1100908.2339913188,
+          "latest_vs_mean_sigma": 3.00936232191482,
+          "growth_mean_pct": 13.549128655497562,
+          "growth_volatility_pp": 7.324488956612899,
+          "best_period": "2017-18",
+          "worst_period": "2016-17",
+          "rising_periods": 52,
+          "falling_periods": 1,
+          "regimes": {
+            "high_gt_1sd": 8,
+            "above_mean": 9,
+            "below_mean": 37,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "others_deposits_with_rbi",
+          "n": 54,
+          "first": 58.0,
+          "latest": 132134.0,
+          "min": 53.0,
+          "max": 132134.0,
+          "min_period": "1973-74",
+          "max_period": "2025-26",
+          "mean": 14166.092592592593,
+          "std": 28977.885692022875,
+          "latest_vs_mean_sigma": 4.07096323938782,
+          "growth_mean_pct": 30.135103527586526,
+          "growth_volatility_pp": 94.69000233375921,
+          "best_period": "2014-15",
+          "worst_period": "1981-82",
+          "rising_periods": 39,
+          "falling_periods": 14,
+          "regimes": {
+            "high_gt_1sd": 6,
+            "above_mean": 6,
+            "below_mean": 42,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "bankers_deposits_with_rbi",
+          "n": 54,
+          "first": 295.0,
+          "latest": 810124.0,
+          "min": 295.0,
+          "max": 1025449.0,
+          "min_period": "1972-73",
+          "max_period": "2023-24",
+          "mean": 232901.46296296295,
+          "std": 297100.07799835847,
+          "latest_vs_mean_sigma": 1.9428555553601246,
+          "growth_mean_pct": 18.60013271097603,
+          "growth_volatility_pp": 26.484918343442875,
+          "best_period": "1973-74",
+          "worst_period": "2025-26",
+          "rising_periods": 43,
+          "falling_periods": 10,
+          "regimes": {
+            "high_gt_1sd": 10,
+            "above_mean": 9,
+            "below_mean": 35,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "demand_deposits",
+          "n": 54,
+          "first": 4204.0,
+          "latest": 3844879.0,
+          "min": 4204.0,
+          "max": 3844879.0,
+          "min_period": "1972-73",
+          "max_period": "2025-26",
+          "mean": 591270.0555555555,
+          "std": 876421.9260701471,
+          "latest_vs_mean_sigma": 3.7123773922835794,
+          "growth_mean_pct": 14.319004534607338,
+          "growth_volatility_pp": 11.404288299032244,
+          "best_period": "2005-06",
+          "worst_period": "1977-78",
+          "rising_periods": 51,
+          "falling_periods": 2,
+          "regimes": {
+            "high_gt_1sd": 9,
+            "above_mean": 8,
+            "below_mean": 37,
+            "low_lt_minus1sd": 0
+          }
+        }
+      ]
+    },
+    "money_stock_monthly": {
+      "rows": 33,
+      "period_range": [
+        "2022-05",
+        "2026-05"
+      ],
+      "diagnostics": [
+        {
+          "series": "currency_in_circulation",
+          "n": 33,
+          "first": 3226000.0,
+          "latest": 4301521.0,
+          "min": 3167073.0,
+          "max": 4301521.0,
+          "min_period": "2022-09",
+          "max_period": "2026-05",
+          "mean": 3507261.6666666665,
+          "std": 277420.2027627344,
+          "latest_vs_mean_sigma": 2.8630190787245207,
+          "growth_mean_pct": 0.9403192917432308,
+          "growth_volatility_pp": 2.8271208567969834,
+          "best_period": "2026-05",
+          "worst_period": "2023-06",
+          "rising_periods": 18,
+          "falling_periods": 14,
+          "regimes": {
+            "high_gt_1sd": 9,
+            "above_mean": 7,
+            "below_mean": 10,
+            "low_lt_minus1sd": 7
+          }
+        },
+        {
+          "series": "cash_with_banks",
+          "n": 33,
+          "first": 108039.0,
+          "latest": 84340.0,
+          "min": 84340.0,
+          "max": 129561.0,
+          "min_period": "2026-05",
+          "max_period": "2022-10",
+          "mean": 106708.33333333333,
+          "std": 10990.420228165374,
+          "latest_vs_mean_sigma": -2.0352573303802837,
+          "growth_mean_pct": -0.5402547532403199,
+          "growth_volatility_pp": 6.964519198360051,
+          "best_period": "2023-06",
+          "worst_period": "2023-07",
+          "rising_periods": 11,
+          "falling_periods": 21,
+          "regimes": {
+            "high_gt_1sd": 7,
+            "above_mean": 8,
+            "below_mean": 13,
+            "low_lt_minus1sd": 5
+          }
+        },
+        {
+          "series": "currency_with_public",
+          "n": 33,
+          "first": 3117960.0,
+          "latest": 4217181.0,
+          "min": 3044594.0,
+          "max": 4217181.0,
+          "min_period": "2022-09",
+          "max_period": "2026-05",
+          "mean": 3400553.3636363638,
+          "std": 286285.2040124081,
+          "latest_vs_mean_sigma": 2.8524968280520784,
+          "growth_mean_pct": 0.9892779314792145,
+          "growth_volatility_pp": 2.9762827961645635,
+          "best_period": "2026-05",
+          "worst_period": "2023-06",
+          "rising_periods": 17,
+          "falling_periods": 15,
+          "regimes": {
+            "high_gt_1sd": 9,
+            "above_mean": 7,
+            "below_mean": 11,
+            "low_lt_minus1sd": 6
+          }
+        },
+        {
+          "series": "others_deposits_with_rbi",
+          "n": 33,
+          "first": 53828.0,
+          "latest": 127269.0,
+          "min": 53828.0,
+          "max": 127269.0,
+          "min_period": "2022-05",
+          "max_period": "2026-05",
+          "mean": 87106.48484848485,
+          "std": 21600.08296587251,
+          "latest_vs_mean_sigma": 1.8593685596009393,
+          "growth_mean_pct": 2.8940395031775514,
+          "growth_volatility_pp": 5.960032903112176,
+          "best_period": "2023-06",
+          "worst_period": "2022-12",
+          "rising_periods": 23,
+          "falling_periods": 9,
+          "regimes": {
+            "high_gt_1sd": 7,
+            "above_mean": 10,
+            "below_mean": 10,
+            "low_lt_minus1sd": 6
+          }
+        },
+        {
+          "series": "bankers_deposits_with_rbi",
+          "n": 33,
+          "first": 863500.0,
+          "latest": 844179.0,
+          "min": 760614.0,
+          "max": 1087967.0,
+          "min_period": "2025-12",
+          "max_period": "2024-11",
+          "mean": 947056.696969697,
+          "std": 85129.45462848216,
+          "latest_vs_mean_sigma": -1.2084853288285575,
+          "growth_mean_pct": 0.042372494833514684,
+          "growth_volatility_pp": 4.840426203848784,
+          "best_period": "2023-08",
+          "worst_period": "2025-12",
+          "rising_periods": 18,
+          "falling_periods": 14,
+          "regimes": {
+            "high_gt_1sd": 5,
+            "above_mean": 13,
+            "below_mean": 8,
+            "low_lt_minus1sd": 7
+          }
+        },
+        {
+          "series": "demand_deposits",
+          "n": 33,
+          "first": 2126310.0,
+          "latest": 3463466.0,
+          "min": 2087340.0,
+          "max": 3463466.0,
+          "min_period": "2022-06",
+          "max_period": "2026-05",
+          "mean": 2629454.6666666665,
+          "std": 403900.3699139234,
+          "latest_vs_mean_sigma": 2.0648937100777416,
+          "growth_mean_pct": 1.657508327156999,
+          "growth_volatility_pp": 5.10703152167998,
+          "best_period": "2025-05",
+          "worst_period": "2023-07",
+          "rising_periods": 20,
+          "falling_periods": 12,
+          "regimes": {
+            "high_gt_1sd": 6,
+            "above_mean": 9,
+            "below_mean": 11,
+            "low_lt_minus1sd": 7
+          }
+        }
+      ]
+    },
+    "money_sources": {
+      "rows": 104,
+      "period_range": [
+        "1974-75",
+        "2025-26"
+      ],
+      "diagnostics": [
+        {
+          "series": "net_rbi_credit_to_government",
+          "n": 104,
+          "first": 6620.0,
+          "latest": 6360229.0,
+          "min": -114636.0,
+          "max": 6360229.0,
+          "min_period": "2007-08",
+          "max_period": "2025-26",
+          "mean": 744294.9134615385,
+          "std": 1313922.622842215,
+          "latest_vs_mean_sigma": 4.274174132408452,
+          "growth_mean_pct": -37.89812163841286,
+          "growth_volatility_pp": 542.6402191208716,
+          "best_period": "2009-10",
+          "worst_period": "2007-08",
+          "rising_periods": 80,
+          "falling_periods": 23,
+          "regimes": {
+            "high_gt_1sd": 12,
+            "above_mean": 16,
+            "below_mean": 76,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "net_rbi_credit_to_banks",
+          "n": 104,
+          "first": 501.0,
+          "latest": 766043.0,
+          "min": -181.0,
+          "max": 766043.0,
+          "min_period": "2008-09",
+          "max_period": "2025-26",
+          "mean": 47967.605769230766,
+          "std": 119698.59393334482,
+          "latest_vs_mean_sigma": 5.999029484261408,
+          "growth_mean_pct": 533.1209371508749,
+          "growth_volatility_pp": 4955.819500457716,
+          "best_period": "2010-11",
+          "worst_period": "1976-77",
+          "rising_periods": 65,
+          "falling_periods": 37,
+          "regimes": {
+            "high_gt_1sd": 8,
+            "above_mean": 13,
+            "below_mean": 83,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "other_banks_investment_in_govt",
+          "n": 104,
+          "first": 2878.0,
+          "latest": 7126272.0,
+          "min": 414.0,
+          "max": 7290189.0,
+          "min_period": "1974-75",
+          "max_period": "2025-26",
+          "mean": 1337654.298076923,
+          "std": 1933066.6505499608,
+          "latest_vs_mean_sigma": 2.994525667429111,
+          "growth_mean_pct": 20.140034265277183,
+          "growth_volatility_pp": 30.234621534583823,
+          "best_period": "1976-77",
+          "worst_period": "1974-75",
+          "rising_periods": 96,
+          "falling_periods": 7,
+          "regimes": {
+            "high_gt_1sd": 16,
+            "above_mean": 18,
+            "below_mean": 70,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "net_bank_credit_to_government",
+          "n": 104,
+          "first": 9999.0,
+          "latest": 40818.0,
+          "min": 531.0,
+          "max": 9369275.0,
+          "min_period": "1974-75",
+          "max_period": "2025-26",
+          "mean": 875637.7596153846,
+          "std": 1960251.0520059064,
+          "latest_vs_mean_sigma": -0.4258738995503262,
+          "growth_mean_pct": 10.74022590970853,
+          "growth_volatility_pp": 13.259483700026081,
+          "best_period": "2008-09",
+          "worst_period": "1974-75",
+          "rising_periods": 100,
+          "falling_periods": 3,
+          "regimes": {
+            "high_gt_1sd": 13,
+            "above_mean": 6,
+            "below_mean": 85,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "rbi_credit_to_commercial_sector",
+          "n": 104,
+          "first": 663.0,
+          "latest": 3065199.0,
+          "min": 663.0,
+          "max": 3065199.0,
+          "min_period": "1974-75",
+          "max_period": "2025-26",
+          "mean": 214645.86538461538,
+          "std": 508837.95061655104,
+          "latest_vs_mean_sigma": 5.602084379047226,
+          "growth_mean_pct": 21.513315721398328,
+          "growth_volatility_pp": 75.82151351737842,
+          "best_period": "2008-09",
+          "worst_period": "1974-75",
+          "rising_periods": 76,
+          "falling_periods": 27,
+          "regimes": {
+            "high_gt_1sd": 13,
+            "above_mean": 5,
+            "below_mean": 86,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "other_banks_credit_to_commercial_sector",
+          "n": 104,
+          "first": 12067.0,
+          "latest": 4244681.0,
+          "min": 2064.0,
+          "max": 22198394.0,
+          "min_period": "1974-75",
+          "max_period": "2025-26",
+          "mean": 2189536.7403846155,
+          "std": 4278755.273911112,
+          "latest_vs_mean_sigma": 0.48031357907899797,
+          "growth_mean_pct": 16.191267240970618,
+          "growth_volatility_pp": 21.32727443574619,
+          "best_period": "2002-03",
+          "worst_period": "1974-75",
+          "rising_periods": 93,
+          "falling_periods": 10,
+          "regimes": {
+            "high_gt_1sd": 12,
+            "above_mean": 11,
+            "below_mean": 81,
+            "low_lt_minus1sd": 0
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,505 @@
+{
+  "project": "P08",
+  "title": "India Forex Reserves Monitor (Annual \u00b7 Monthly \u00b7 Weekly)",
+  "kpis": [
+    {
+      "label": "Total Reserves (US$ mn)",
+      "unit": "US$ mn",
+      "value": 672587.0
+    },
+    {
+      "label": "FCAs (US$ mn)",
+      "unit": "US$ mn",
+      "value": 541217.0
+    },
+    {
+      "label": "Gold (US$ mn)",
+      "unit": "US$ mn",
+      "value": 107930.0
+    },
+    {
+      "label": "Reserves YoY Growth",
+      "unit": "%",
+      "value": -0.007176241015233398
+    }
+  ],
+  "datasets": {
+    "forex_annual": {
+      "rows": 58,
+      "period_range": [
+        "1968-69",
+        "2025-26"
+      ],
+      "diagnostics": [
+        {
+          "series": "sdr_inr_crore",
+          "n": 57,
+          "first": 92.0,
+          "latest": 176589.0,
+          "min": 4.0,
+          "max": 176589.0,
+          "min_period": "1997-98",
+          "max_period": "2025-26",
+          "mean": 17299.842105263157,
+          "std": 43995.31735869718,
+          "latest_vs_mean_sigma": 3.6205934507993245,
+          "growth_mean_pct": 6801.893622913539,
+          "growth_volatility_pp": 50301.965445043505,
+          "best_period": "2009-10",
+          "worst_period": "1996-97",
+          "rising_periods": 30,
+          "falling_periods": 26,
+          "regimes": {
+            "high_gt_1sd": 5,
+            "above_mean": 6,
+            "below_mean": 46,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "sdr_usd_mn",
+          "n": 57,
+          "first": 123.0,
+          "latest": 18621.0,
+          "min": 1.0,
+          "max": 18891.0,
+          "min_period": "1997-98",
+          "max_period": "2021-22",
+          "mean": 2349.6140350877195,
+          "std": 5212.740880882923,
+          "latest_vs_mean_sigma": 3.121464568589158,
+          "growth_mean_pct": 9010.850465909461,
+          "growth_volatility_pp": 66872.67110848274,
+          "best_period": "2009-10",
+          "worst_period": "1996-97",
+          "rising_periods": 21,
+          "falling_periods": 35,
+          "regimes": {
+            "high_gt_1sd": 5,
+            "above_mean": 6,
+            "below_mean": 46,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "gold_inr_crore",
+          "n": 58,
+          "first": 183.0,
+          "latest": 1094309.0,
+          "min": 183.0,
+          "max": 1094309.0,
+          "min_period": "1968-69",
+          "max_period": "2025-26",
+          "mean": 86193.41379310345,
+          "std": 184343.77719321277,
+          "latest_vs_mean_sigma": 5.468671639239981,
+          "growth_mean_pct": 52.13588564628422,
+          "growth_volatility_pp": 307.54572033739356,
+          "best_period": "1990-91",
+          "worst_period": "2014-15",
+          "rising_periods": 37,
+          "falling_periods": 7,
+          "regimes": {
+            "high_gt_1sd": 5,
+            "above_mean": 11,
+            "below_mean": 42,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "gold_usd_mn",
+          "n": 58,
+          "first": 243.0,
+          "latest": 115395.0,
+          "min": 243.0,
+          "max": 115395.0,
+          "min_period": "1968-69",
+          "max_period": "2025-26",
+          "mean": 12271.534482758621,
+          "std": 20836.092662640913,
+          "latest_vs_mean_sigma": 4.949270824761766,
+          "growth_mean_pct": 19.786003722747225,
+          "growth_volatility_pp": 82.67948504997534,
+          "best_period": "1990-91",
+          "worst_period": "1997-98",
+          "rising_periods": 37,
+          "falling_periods": 17,
+          "regimes": {
+            "high_gt_1sd": 6,
+            "above_mean": 11,
+            "below_mean": 41,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "fca_inr_crore",
+          "n": 58,
+          "first": 394.0,
+          "latest": 5237367.0,
+          "min": 394.0,
+          "max": 5237367.0,
+          "min_period": "1968-69",
+          "max_period": "2025-26",
+          "mean": 954855.4310344828,
+          "std": 1472547.6229782456,
+          "latest_vs_mean_sigma": 2.908232984889198,
+          "growth_mean_pct": 22.92481317731017,
+          "growth_volatility_pp": 41.87787994927387,
+          "best_period": "1991-92",
+          "worst_period": "1981-82",
+          "rising_periods": 46,
+          "falling_periods": 11,
+          "regimes": {
+            "high_gt_1sd": 9,
+            "above_mean": 10,
+            "below_mean": 39,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "fca_usd_mn",
+          "n": 58,
+          "first": 526.0,
+          "latest": 552283.0,
+          "min": 526.0,
+          "max": 570950.0,
+          "min_period": "1968-69",
+          "max_period": "2023-24",
+          "mean": 144313.1896551724,
+          "std": 188431.1067695618,
+          "latest_vs_mean_sigma": 2.165087375110238,
+          "growth_mean_pct": 17.3526532115648,
+          "growth_volatility_pp": 36.04307638794351,
+          "best_period": "1991-92",
+          "worst_period": "1981-82",
+          "rising_periods": 39,
+          "falling_periods": 18,
+          "regimes": {
+            "high_gt_1sd": 11,
+            "above_mean": 10,
+            "below_mean": 37,
+            "low_lt_minus1sd": 0
+          }
+        }
+      ]
+    },
+    "forex_monthly": {
+      "rows": 39,
+      "period_range": [
+        "2023-03",
+        "2026-05"
+      ],
+      "diagnostics": [
+        {
+          "series": "sdr_inr_crore",
+          "n": 39,
+          "first": 151164.0,
+          "latest": 178407.0,
+          "min": 149388.0,
+          "max": 178407.0,
+          "min_period": "2023-09",
+          "max_period": "2026-05",
+          "mean": 157827.58974358975,
+          "std": 8952.918564762022,
+          "latest_vs_mean_sigma": 2.298625873512262,
+          "growth_mean_pct": 0.44347777045760156,
+          "growth_volatility_pp": 1.1561697259182289,
+          "best_period": "2026-01",
+          "worst_period": "2026-02",
+          "rising_periods": 24,
+          "falling_periods": 14,
+          "regimes": {
+            "high_gt_1sd": 6,
+            "above_mean": 7,
+            "below_mean": 26,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "sdr_usd_mn",
+          "n": 39,
+          "first": 18392.0,
+          "latest": 18776.0,
+          "min": 17882.0,
+          "max": 18953.0,
+          "min_period": "2024-12",
+          "max_period": "2026-01",
+          "mean": 18377.128205128207,
+          "std": 313.9580243052262,
+          "latest_vs_mean_sigma": 1.2704621764469213,
+          "growth_mean_pct": 0.05866615135379841,
+          "growth_volatility_pp": 0.9379972708559642,
+          "best_period": "2025-04",
+          "worst_period": "2024-10",
+          "rising_periods": 19,
+          "falling_periods": 19,
+          "regimes": {
+            "high_gt_1sd": 8,
+            "above_mean": 10,
+            "below_mean": 13,
+            "low_lt_minus1sd": 8
+          }
+        },
+        {
+          "series": "gold_inr_crore",
+          "n": 39,
+          "first": 371500.0,
+          "latest": 1100569.0,
+          "min": 359585.0,
+          "max": 1197517.0,
+          "min_period": "2023-06",
+          "max_period": "2026-02",
+          "mean": 631649.4871794871,
+          "std": 261719.94493138653,
+          "latest_vs_mean_sigma": 1.7916842865890352,
+          "growth_mean_pct": 3.0013687181782567,
+          "growth_volatility_pp": 4.670542558708515,
+          "best_period": "2026-01",
+          "worst_period": "2026-03",
+          "rising_periods": 29,
+          "falling_periods": 9,
+          "regimes": {
+            "high_gt_1sd": 8,
+            "above_mean": 8,
+            "below_mean": 21,
+            "low_lt_minus1sd": 2
+          }
+        },
+        {
+          "series": "gold_usd_mn",
+          "n": 39,
+          "first": 45200.0,
+          "latest": 115823.0,
+          "min": 43342.0,
+          "max": 131630.0,
+          "min_period": "2023-09",
+          "max_period": "2026-02",
+          "mean": 72529.76923076923,
+          "std": 26668.57883496837,
+          "latest_vs_mean_sigma": 1.623379747272615,
+          "growth_mean_pct": 2.6163627350361196,
+          "growth_volatility_pp": 4.766230547985327,
+          "best_period": "2026-01",
+          "worst_period": "2026-03",
+          "rising_periods": 28,
+          "falling_periods": 10,
+          "regimes": {
+            "high_gt_1sd": 8,
+            "above_mean": 8,
+            "below_mean": 16,
+            "low_lt_minus1sd": 7
+          }
+        },
+        {
+          "series": "fca_inr_crore",
+          "n": 39,
+          "first": 4189132.0,
+          "latest": 5196928.0,
+          "min": 4189132.0,
+          "max": 5238072.0,
+          "min_period": "2023-03",
+          "max_period": "2026-04",
+          "mean": 4795021.307692308,
+          "std": 317847.9663559918,
+          "latest_vs_mean_sigma": 1.2644620537151838,
+          "growth_mean_pct": 0.5864594027834046,
+          "growth_volatility_pp": 1.8993460598236158,
+          "best_period": "2026-01",
+          "worst_period": "2024-10",
+          "rising_periods": 23,
+          "falling_periods": 15,
+          "regimes": {
+            "high_gt_1sd": 8,
+            "above_mean": 12,
+            "below_mean": 10,
+            "low_lt_minus1sd": 9
+          }
+        },
+        {
+          "series": "fca_usd_mn",
+          "n": 39,
+          "first": 509691.0,
+          "latest": 546923.0,
+          "min": 509691.0,
+          "max": 617075.0,
+          "min_period": "2023-03",
+          "max_period": "2024-09",
+          "mean": 558422.2307692308,
+          "std": 25099.347230410447,
+          "latest_vs_mean_sigma": -0.4581485989921781,
+          "growth_mean_pct": 0.20925008801037617,
+          "growth_volatility_pp": 2.196959175197238,
+          "best_period": "2025-03",
+          "worst_period": "2024-10",
+          "rising_periods": 21,
+          "falling_periods": 17,
+          "regimes": {
+            "high_gt_1sd": 7,
+            "above_mean": 12,
+            "below_mean": 13,
+            "low_lt_minus1sd": 7
+          }
+        }
+      ]
+    },
+    "forex_weekly": {
+      "rows": 116,
+      "period_range": [
+        "2024-04-05",
+        "2026-06-19"
+      ],
+      "diagnostics": [
+        {
+          "series": "sdr_inr_crore",
+          "n": 116,
+          "first": 151325.0,
+          "latest": 175937.0,
+          "min": 150209.0,
+          "max": 180649.0,
+          "min_period": "2024-06-28",
+          "max_period": "2026-05-15",
+          "mean": 161156.12931034484,
+          "std": 8784.769908179449,
+          "latest_vs_mean_sigma": 1.6825563838493682,
+          "growth_mean_pct": 0.13305812433430952,
+          "growth_volatility_pp": 0.6240767420281081,
+          "best_period": "2026-01-23",
+          "worst_period": "2026-02-06",
+          "rising_periods": 70,
+          "falling_periods": 45,
+          "regimes": {
+            "high_gt_1sd": 23,
+            "above_mean": 28,
+            "below_mean": 45,
+            "low_lt_minus1sd": 20
+          }
+        },
+        {
+          "series": "sdr_usd_mn",
+          "n": 116,
+          "first": 18170.0,
+          "latest": 18647.0,
+          "min": 17781.0,
+          "max": 18953.0,
+          "min_period": "2025-01-10",
+          "max_period": "2026-01-30",
+          "mean": 18451.28448275862,
+          "std": 331.82519772325605,
+          "latest_vs_mean_sigma": 0.5898151152601986,
+          "growth_mean_pct": 0.023455115401216364,
+          "growth_volatility_pp": 0.43090343800779835,
+          "best_period": "2025-03-07",
+          "worst_period": "2025-08-01",
+          "rising_periods": 58,
+          "falling_periods": 56,
+          "regimes": {
+            "high_gt_1sd": 17,
+            "above_mean": 50,
+            "below_mean": 22,
+            "low_lt_minus1sd": 27
+          }
+        },
+        {
+          "series": "gold_inr_crore",
+          "n": 116,
+          "first": 454381.0,
+          "latest": 1018336.0,
+          "min": 454381.0,
+          "max": 1266470.0,
+          "min_period": "2024-04-05",
+          "max_period": "2026-01-30",
+          "mean": 755058.224137931,
+          "std": 235830.55206877322,
+          "latest_vs_mean_sigma": 1.1163853603891474,
+          "growth_mean_pct": 0.7513239565327315,
+          "growth_volatility_pp": 3.0673967446792867,
+          "best_period": "2026-01-30",
+          "worst_period": "2026-02-06",
+          "rising_periods": 78,
+          "falling_periods": 37,
+          "regimes": {
+            "high_gt_1sd": 25,
+            "above_mean": 19,
+            "below_mean": 50,
+            "low_lt_minus1sd": 22
+          }
+        },
+        {
+          "series": "gold_usd_mn",
+          "n": 116,
+          "first": 54558.0,
+          "latest": 107930.0,
+          "min": 54558.0,
+          "max": 137683.0,
+          "min_period": "2024-04-05",
+          "max_period": "2026-01-30",
+          "mean": 85629.24137931035,
+          "std": 23394.57319704004,
+          "latest_vs_mean_sigma": 0.9532449441527413,
+          "growth_mean_pct": 0.6435983046421386,
+          "growth_volatility_pp": 3.1175916406082727,
+          "best_period": "2026-01-30",
+          "worst_period": "2026-03-20",
+          "rising_periods": 74,
+          "falling_periods": 41,
+          "regimes": {
+            "high_gt_1sd": 25,
+            "above_mean": 25,
+            "below_mean": 43,
+            "low_lt_minus1sd": 23
+          }
+        },
+        {
+          "series": "fca_inr_crore",
+          "n": 116,
+          "first": 4756930.0,
+          "latest": 5106454.0,
+          "min": 4607932.0,
+          "max": 5238870.0,
+          "min_period": "2025-01-10",
+          "max_period": "2026-05-15",
+          "mean": 4976431.7844827585,
+          "std": 173945.18888205566,
+          "latest_vs_mean_sigma": 0.7474895761871498,
+          "growth_mean_pct": 0.06522780529763705,
+          "growth_volatility_pp": 0.8472670111522254,
+          "best_period": "2026-01-16",
+          "worst_period": "2024-11-15",
+          "rising_periods": 60,
+          "falling_periods": 55,
+          "regimes": {
+            "high_gt_1sd": 25,
+            "above_mean": 41,
+            "below_mean": 24,
+            "low_lt_minus1sd": 26
+          }
+        },
+        {
+          "series": "fca_usd_mn",
+          "n": 116,
+          "first": 571166.0,
+          "latest": 541217.0,
+          "min": 533133.0,
+          "max": 616154.0,
+          "min_period": "2025-01-17",
+          "max_period": "2024-09-27",
+          "mean": 570440.2844827586,
+          "std": 18241.688379049945,
+          "latest_vs_mean_sigma": -1.602005465476579,
+          "growth_mean_pct": -0.0436027205975756,
+          "growth_volatility_pp": 0.8059651416021688,
+          "best_period": "2025-03-07",
+          "worst_period": "2024-11-15",
+          "rising_periods": 55,
+          "falling_periods": 60,
+          "regimes": {
+            "high_gt_1sd": 19,
+            "above_mean": 37,
+            "below_mean": 40,
+            "low_lt_minus1sd": 20
+          }
+        }
+      ]
+    }
+  }
+}

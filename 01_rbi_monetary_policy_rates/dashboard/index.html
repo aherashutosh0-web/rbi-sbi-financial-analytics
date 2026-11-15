@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RBI Monetary Policy & Reserve Requirements Tracker · RBI–SBI Financial Analytics</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --canvas: #F4F6FB; --surface: #FFFFFF; --navy: #1B2A4A;
+    --ink: #12233F; --ink-muted: #5A6B87; --accent: #2D4E8F;
+    --grid: #D6DEEC; --pos: #1B8A5A; --neg: #C44536;
+    --font: 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--canvas); color: var(--ink); font-family: var(--font); }
+  header { background: var(--navy); color: #fff; padding: 28px 40px 22px; }
+  header .eyebrow { font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase;
+    color: #2D4E8F; font-weight: 600; }
+  header h1 { font-size: 26px; font-weight: 650; margin-top: 6px; }
+  header .sub { color: #B9C4DA; font-size: 13.5px; margin-top: 8px; max-width: 900px; line-height: 1.5; }
+  .bar { height: 5px; background: linear-gradient(90deg, #2D4E8F 0%, #2D4E8F99 40%, transparent 100%); }
+  main { padding: 28px 40px 60px; max-width: 1400px; margin: 0 auto; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 16px; margin: 22px 0 30px; }
+  .kpi { background: var(--navy); border-radius: 12px; padding: 18px 20px;
+    box-shadow: 0 1px 3px rgba(18,35,63,.12); }
+  .kpi-label { color: #AEBBD3; font-size: 11.5px; letter-spacing: .8px; text-transform: uppercase; }
+  .kpi-value { color: #2D4E8F; font-size: 27px; font-weight: 700; margin-top: 8px; }
+  .kpi-unit { color: #8FA0BC; font-size: 13px; font-weight: 500; margin-left: 5px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .card { background: var(--surface); border: 1px solid var(--grid); border-radius: 12px;
+    padding: 20px 22px 14px; }
+  .card.full { grid-column: 1 / -1; }
+  .card h2 { font-size: 15px; font-weight: 650; color: var(--ink); margin-bottom: 4px; }
+  .card .note { font-size: 11.5px; color: var(--ink-muted); margin-bottom: 12px; }
+  .chart-box { position: relative; height: 330px; }
+  footer { padding: 22px 40px; color: var(--ink-muted); font-size: 11.5px;
+    border-top: 1px solid var(--grid); line-height: 1.7; }
+  footer b { color: var(--ink); }
+  .pill { display:inline-block; padding: 3px 10px; border-radius: 999px;
+    background: #2D4E8F22; color: var(--accent); font-size: 11px; font-weight: 600;
+    margin-left: 8px; vertical-align: middle; }
+  @media (max-width: 980px) { .grid { grid-template-columns: 1fr; } main { padding: 20px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">Macro-Finance · Monetary Policy</div>
+  <h1>RBI Monetary Policy & Reserve Requirements Tracker <span class="pill">P01</span></h1>
+  <div class="sub">How have RBI's policy rates and reserve requirements evolved, and what is the current monetary stance for banking operations?</div>
+</header>
+<div class="bar"></div>
+<main>
+  <section class="kpis">
+        <div class="kpi">
+          <div class="kpi-label">Latest Repo Rate</div>
+          <div class="kpi-value">5.25<span class="kpi-unit">%</span></div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Latest CRR</div>
+          <div class="kpi-value">3.00<span class="kpi-unit">%</span></div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Latest SLR</div>
+          <div class="kpi-value">18.00<span class="kpi-unit">%</span></div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Repo Rate 10Y Avg</div>
+          <div class="kpi-value">6.46<span class="kpi-unit">%</span></div>
+        </div></section>
+  <section class="grid">
+    <div class="card full">
+      <h2>Policy Rate Corridor (Repo · MSF · Reverse Repo)</h2>
+      <div class="note">Source: RBI Handbook of Statistics / market data · rendered with Chart.js</div>
+      <div class="chart-box"><canvas id="chart-0"></canvas></div>
+    </div>
+
+    <div class="card">
+      <h2>Reserve Requirements (CRR & SLR, %)</h2>
+      <div class="note">Source: RBI Handbook of Statistics / market data · rendered with Chart.js</div>
+      <div class="chart-box"><canvas id="chart-1"></canvas></div>
+    </div>
+
+    <div class="card full">
+      <h2>Bank Rate vs Repo Rate (spread, pp)</h2>
+      <div class="note">Source: RBI Handbook of Statistics / market data · rendered with Chart.js</div>
+      <div class="chart-box"><canvas id="chart-2"></canvas></div>
+    </div></section>
+</main>
+<footer>
+  <b>Data sources:</b> Reserve Bank of India — Handbook of Statistics on Indian Economy (data.rbi.org.in); Yahoo Finance market data (SBIN.NS and benchmarks).<br>
+  <b>Design:</b> "Central Bank Blue" colour system — analogous blue structure + complementary amber accent
+  (60-30-10 rule, WCAG AA). See portfolio <b>COLOR_THEORY.md</b>.<br>
+  <b>Portfolio:</b> RBI–SBI Financial Analytics · 18 industrial-grade projects (SQL · Python · Excel · Dashboards)
+  · Generated for Ashutosh Aher — Business Analyst portfolio.
+</footer>
+<script>
+const PALETTE = ["#2D4E8F", "#2A9D8F", "#E9A23B", "#E76F51", "#7E57C2", "#B08968"];
+Chart.defaults.font.family = "'Segoe UI', Inter, sans-serif";
+Chart.defaults.color = "#5A6B87";
+Chart.defaults.borderColor = "#D6DEEC";
+const CHARTS = [{"type": "line", "title": "Policy Rate Corridor (Repo \u00b7 MSF \u00b7 Reverse Repo)", "labels": ["2008-04-26", "2008-05-10", "2008-05-24", "2008-06-12", "2008-06-25", "2008-07-05", "2008-07-19", "2008-07-30", "2008-08-30", "2008-10-11", "2008-10-20", "2008-10-25", "2008-11-03", "2008-11-08", "2008-12-08", "2009-01-05", "2009-01-17", "2009-03-05", "2009-04-21", "2009-11-07", "2010-02-13", "2010-02-27", "2010-03-19", "2010-04-20", "2010-04-24", "2010-07-02", "2010-07-27", "2010-09-16", "2010-11-02", "2010-12-18", "2011-01-25", "2011-03-17", "2011-05-03", "2011-06-16", "2011-07-26", "2011-09-16", "2011-10-25", "2012-01-28", "2012-02-13", "2012-03-10", "2012-04-17", "2012-08-11", "2012-09-22", "2012-11-03", "2013-01-29", "2013-02-09", "2013-03-19", "2013-05-03", "2013-07-15", "2013-09-20", "2013-10-07", "2013-10-29", "2014-01-28", "2014-06-14", "2014-08-09", "2015-01-15", "2015-02-07", "2015-03-04", "2015-06-02", "2015-09-29", "2016-04-02", "2016-04-05", "2016-07-09", "2016-10-01", "2016-10-04", "2017-01-07", "2017-04-06", "2017-06-24", "2017-08-02", "2017-10-14", "2018-06-06", "2018-08-01", "2019-01-05", "2019-02-07", "2019-04-04", "2019-04-13", "2019-06-06", "2019-07-06", "2019-08-07", "2019-10-04", "2019-10-12", "2020-01-04", "2020-03-27", "2020-03-28", "2020-04-11", "2020-04-17", "2020-05-22", "2021-03-27", "2021-05-22", "2022-04-08", "2022-05-04", "2022-05-21", "2022-06-08", "2022-08-05", "2022-09-30", "2022-12-07", "2023-02-08", "2024-12-14", "2024-12-28", "2025-02-07", "2025-04-09", "2025-06-06", "2025-09-06", "2025-10-04", "2025-11-01", "2025-11-29", "2025-12-05"], "series": [{"label": "Repo Rate", "data": [null, null, null, 8.0, 8.5, 8.5, 8.5, 9.0, 9.0, 9.0, 8.0, 8.0, 7.5, 7.5, 6.5, 5.5, 5.5, 5.0, 4.75, 4.75, 4.75, 4.75, 5.0, 5.25, 5.25, 5.5, 5.75, 6.0, 6.25, 6.25, 6.5, 6.75, 7.25, 7.5, 8.0, 8.25, 8.5, 8.5, 8.5, 8.5, 8.0, 8.0, 8.0, 8.0, 7.75, 7.75, 7.5, 7.25, 7.25, 7.5, 7.5, 7.75, 8.0, 8.0, 8.0, 7.75, 7.75, 7.5, 7.25, 6.75, 6.75, 6.5, 6.5, 6.5, 6.25, 6.25, 6.25, 6.25, 6.0, 6.0, 6.25, 6.5, 6.5, 6.25, 6.0, 6.0, 5.75, 5.75, 5.4, 5.15, 5.15, 5.15, 4.4, 4.4, 4.4, 4.4, 4.0, 4.0, 4.0, 4.0, 4.4, 4.4, 4.9, 5.4, 5.9, 6.25, 6.5, 6.5, 6.5, 6.25, 6.0, 5.5, 5.5, 5.5, 5.5, 5.5, 5.25]}, {"label": "MSF Rate", "data": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 8.25, 8.5, 9.0, 9.25, 9.5, 9.5, 9.5, 9.5, 9.0, 9.0, 9.0, 9.0, 8.75, 8.75, 8.5, 8.25, 10.25, 9.5, 9.0, 8.75, 9.0, 9.0, 9.0, 8.75, 8.75, 8.5, 8.25, 7.75, 7.75, 7.0, 7.0, 7.0, 6.75, 6.75, 6.5, 6.5, 6.25, 6.25, 6.5, 6.75, 6.75, 6.5, 6.25, 6.25, 6.0, 6.0, 5.65, 5.4, 5.4, 5.4, 4.65, 4.65, 4.65, 4.65, 4.25, 4.25, 4.25, 4.25, 4.65, 4.65, 5.15, 5.65, 6.15, 6.5, 6.75, 6.75, 6.75, 6.5, 6.25, 5.75, 5.75, 5.75, 5.75, 5.75, 5.5]}, {"label": "Reverse Repo", "data": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, 5.0, 4.0, 4.0, 3.5, 3.25, 3.25, 3.25, 3.25, 3.5, 3.75, 3.75, 4.0, 4.5, 5.0, 5.25, 5.25, 5.5, 5.75, 6.25, 6.5, 7.0, 7.25, 7.5, 7.5, 7.5, 7.5, 7.0, 7.0, 7.0, 7.0, 6.75, 6.75, 6.5, 6.25, 6.25, 6.5, 6.5, 6.75, 7.0, 7.0, 7.0, 6.75, 6.75, 6.5, 6.25, 5.75, 5.75, 6.0, 6.0, 6.0, 5.75, 5.75, 6.0, 6.0, 5.75, 5.75, 6.0, 6.25, 6.25, 6.0, 5.75, 5.75, 5.5, 5.5, 5.15, 4.9, 4.9, 4.9, 4.0, 4.0, 4.0, 3.75, 3.35, 3.35, 3.35, 3.35, 3.35, 3.35, 3.35, 3.35, 3.35, 3.35, 3.35, 3.35, 3.35, 3.35, 3.35, 3.35, 3.35, 3.35, 3.35, 3.35, 3.35]}], "accent": null}, {"type": "bar", "title": "Reserve Requirements (CRR & SLR, %)", "labels": ["2008-04-26", "2008-05-10", "2008-05-24", "2008-06-12", "2008-06-25", "2008-07-05", "2008-07-19", "2008-07-30", "2008-08-30", "2008-10-11", "2008-10-20", "2008-10-25", "2008-11-03", "2008-11-08", "2008-12-08", "2009-01-05", "2009-01-17", "2009-03-05", "2009-04-21", "2009-11-07", "2010-02-13", "2010-02-27", "2010-03-19", "2010-04-20", "2010-04-24", "2010-07-02", "2010-07-27", "2010-09-16", "2010-11-02", "2010-12-18", "2011-01-25", "2011-03-17", "2011-05-03", "2011-06-16", "2011-07-26", "2011-09-16", "2011-10-25", "2012-01-28", "2012-02-13", "2012-03-10", "2012-04-17", "2012-08-11", "2012-09-22", "2012-11-03", "2013-01-29", "2013-02-09", "2013-03-19", "2013-05-03", "2013-07-15", "2013-09-20", "2013-10-07", "2013-10-29", "2014-01-28", "2014-06-14", "2014-08-09", "2015-01-15", "2015-02-07", "2015-03-04", "2015-06-02", "2015-09-29", "2016-04-02", "2016-04-05", "2016-07-09", "2016-10-01", "2016-10-04", "2017-01-07", "2017-04-06", "2017-06-24", "2017-08-02", "2017-10-14", "2018-06-06", "2018-08-01", "2019-01-05", "2019-02-07", "2019-04-04", "2019-04-13", "2019-06-06", "2019-07-06", "2019-08-07", "2019-10-04", "2019-10-12", "2020-01-04", "2020-03-27", "2020-03-28", "2020-04-11", "2020-04-17", "2020-05-22", "2021-03-27", "2021-05-22", "2022-04-08", "2022-05-04", "2022-05-21", "2022-06-08", "2022-08-05", "2022-09-30", "2022-12-07", "2023-02-08", "2024-12-14", "2024-12-28", "2025-02-07", "2025-04-09", "2025-06-06", "2025-09-06", "2025-10-04", "2025-11-01", "2025-11-29", "2025-12-05"], "series": [{"label": "CRR", "data": [7.75, 8.0, 8.25, 8.25, 8.25, 8.5, 8.75, 8.75, 9.0, 6.5, 6.5, 6.0, 6.0, 5.5, 5.5, 5.5, 5.0, 5.0, 5.0, 5.0, 5.5, 5.75, 5.75, 5.75, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 5.5, 5.5, 4.75, 4.75, 4.75, 4.5, 4.25, 4.25, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.5, 4.0, 4.0, 4.0, 4.5, 4.5, 4.5, 4.5, 4.5, 4.5, 4.25, 4.0, 4.0, 4.0, 4.0, 3.75, 3.5, 3.25, 3.0, 3.0]}, {"label": "SLR", "data": [null, null, null, null, null, null, null, null, null, null, null, null, null, 24.0, 24.0, 24.0, 24.0, 24.0, 24.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 24.0, 24.0, 24.0, 24.0, 24.0, 24.0, 24.0, 24.0, 24.0, 24.0, 24.0, 24.0, 23.0, 23.0, 23.0, 23.0, 23.0, 23.0, 23.0, 23.0, 23.0, 23.0, 23.0, 23.0, 22.5, 22.0, 22.0, 21.5, 21.5, 21.5, 21.5, 21.25, 21.25, 21.0, 20.75, 20.75, 20.5, 20.5, 20.0, 20.0, 19.5, 19.5, 19.5, 19.25, 19.25, 19.25, 19.0, 19.0, 18.75, 18.75, 18.75, 18.5, 18.25, 18.25, 18.25, 18.0, 18.0, 18.0, 18.0, 18.0, 18.0, 18.0, 18.0, 18.0, 18.0, 18.0, 18.0, 18.0, 18.0, 18.0, 18.0, 18.0, 18.0, 18.0, 18.0, 18.0, 18.0, 18.0]}], "accent": null}, {"type": "line", "title": "Bank Rate vs Repo Rate (spread, pp)", "labels": ["2008-04-26", "2008-05-10", "2008-05-24", "2008-06-12", "2008-06-25", "2008-07-05", "2008-07-19", "2008-07-30", "2008-08-30", "2008-10-11", "2008-10-20", "2008-10-25", "2008-11-03", "2008-11-08", "2008-12-08", "2009-01-05", "2009-01-17", "2009-03-05", "2009-04-21", "2009-11-07", "2010-02-13", "2010-02-27", "2010-03-19", "2010-04-20", "2010-04-24", "2010-07-02", "2010-07-27", "2010-09-16", "2010-11-02", "2010-12-18", "2011-01-25", "2011-03-17", "2011-05-03", "2011-06-16", "2011-07-26", "2011-09-16", "2011-10-25", "2012-01-28", "2012-02-13", "2012-03-10", "2012-04-17", "2012-08-11", "2012-09-22", "2012-11-03", "2013-01-29", "2013-02-09", "2013-03-19", "2013-05-03", "2013-07-15", "2013-09-20", "2013-10-07", "2013-10-29", "2014-01-28", "2014-06-14", "2014-08-09", "2015-01-15", "2015-02-07", "2015-03-04", "2015-06-02", "2015-09-29", "2016-04-02", "2016-04-05", "2016-07-09", "2016-10-01", "2016-10-04", "2017-01-07", "2017-04-06", "2017-06-24", "2017-08-02", "2017-10-14", "2018-06-06", "2018-08-01", "2019-01-05", "2019-02-07", "2019-04-04", "2019-04-13", "2019-06-06", "2019-07-06", "2019-08-07", "2019-10-04", "2019-10-12", "2020-01-04", "2020-03-27", "2020-03-28", "2020-04-11", "2020-04-17", "2020-05-22", "2021-03-27", "2021-05-22", "2022-04-08", "2022-05-04", "2022-05-21", "2022-06-08", "2022-08-05", "2022-09-30", "2022-12-07", "2023-02-08", "2024-12-14", "2024-12-28", "2025-02-07", "2025-04-09", "2025-06-06", "2025-09-06", "2025-10-04", "2025-11-01", "2025-11-29", "2025-12-05"], "series": [{"label": "Bank Rate", "data": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 9.5, 9.5, 9.0, 9.0, 9.0, 9.0, 8.75, 8.75, 8.5, 8.25, 10.25, 9.5, 9.0, 8.75, 9.0, 9.0, 9.0, 8.75, 8.75, 8.5, 8.25, 7.75, 7.75, 7.0, 7.0, 7.0, 6.75, 6.75, 6.5, 6.5, 6.25, 6.25, 6.5, 6.75, 6.75, 6.5, 6.25, 6.25, 6.0, 6.0, 5.65, 5.4, 5.4, 5.4, 4.65, 4.65, 4.65, 4.65, 4.25, 4.25, 4.25, 4.25, 4.65, 4.65, 5.15, 5.65, 6.15, 6.5, 6.75, 6.75, 6.75, 6.5, 6.25, 5.75, 5.75, 5.75, 5.75, 5.75, 5.5]}, {"label": "Repo Rate", "data": [null, null, null, 8.0, 8.5, 8.5, 8.5, 9.0, 9.0, 9.0, 8.0, 8.0, 7.5, 7.5, 6.5, 5.5, 5.5, 5.0, 4.75, 4.75, 4.75, 4.75, 5.0, 5.25, 5.25, 5.5, 5.75, 6.0, 6.25, 6.25, 6.5, 6.75, 7.25, 7.5, 8.0, 8.25, 8.5, 8.5, 8.5, 8.5, 8.0, 8.0, 8.0, 8.0, 7.75, 7.75, 7.5, 7.25, 7.25, 7.5, 7.5, 7.75, 8.0, 8.0, 8.0, 7.75, 7.75, 7.5, 7.25, 6.75, 6.75, 6.5, 6.5, 6.5, 6.25, 6.25, 6.25, 6.25, 6.0, 6.0, 6.25, 6.5, 6.5, 6.25, 6.0, 6.0, 5.75, 5.75, 5.4, 5.15, 5.15, 5.15, 4.4, 4.4, 4.4, 4.4, 4.0, 4.0, 4.0, 4.0, 4.4, 4.4, 4.9, 5.4, 5.9, 6.25, 6.5, 6.5, 6.5, 6.25, 6.0, 5.5, 5.5, 5.5, 5.5, 5.5, 5.25]}], "accent": null}];
+CHARTS.forEach((c, i) => {
+  const el = document.getElementById('chart-' + i);
+  if (!el) return;
+  const isBar = c.type === 'bar' || c.type === 'hbar';
+  const cfg = {
+    type: c.type === 'hbar' ? 'bar' : (c.type === 'area' ? 'line' : c.type),
+    data: {
+      labels: c.labels,
+      datasets: c.series.map((s, j) => ({
+        label: s.label,
+        data: s.data,
+        borderColor: PALETTE[j % PALETTE.length],
+        backgroundColor: isBar ? PALETTE[j % PALETTE.length] + 'B3' : PALETTE[j % PALETTE.length] + '26',
+        borderWidth: 2, pointRadius: 0, pointHitRadius: 8,
+        fill: c.type === 'area' && j === 0 ? 'origin' : false,
+        tension: 0.25, borderRadius: isBar ? 4 : 0,
+      }))
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      indexAxis: c.type === 'hbar' ? 'y' : 'x',
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { position: 'top', align: 'start',
+          labels: { boxWidth: 12, boxHeight: 12, usePointStyle: true, pointStyle: 'rectRounded' } },
+        tooltip: { backgroundColor: "#1B2A4A", padding: 10, cornerRadius: 8,
+          titleFont: { size: 12 }, bodyFont: { size: 12 } }
+      },
+      scales: {
+        x: { grid: { color: "#D6DEEC", drawTicks: false }, ticks: { maxTicksLimit: 12, font: { size: 11 } } },
+        y: { grid: { color: "#D6DEEC", drawTicks: false }, ticks: { font: { size: 11 } } }
+      }
+    }
+  };
+  new Chart(el, cfg);
+});
+</script>
+</body>
+</html>

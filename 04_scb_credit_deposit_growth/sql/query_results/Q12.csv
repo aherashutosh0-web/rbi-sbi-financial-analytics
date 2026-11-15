@@ -1,0 +1,6 @@
+column_name,null_count,negative_count,row_count
+demand_deposits,0,0,60
+time_deposits,3,0,60
+aggregate_deposits,3,0,60
+borrowings_from_rbi,26,0,60
+liabilities_to_banks,0,0,60

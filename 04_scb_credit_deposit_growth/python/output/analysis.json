@@ -1,0 +1,505 @@
+{
+  "project": "P04",
+  "title": "Scheduled Commercial Banks \u2014 Credit & Deposit Growth Engine",
+  "kpis": [
+    {
+      "label": "Aggregate Deposits (\u20b9 cr)",
+      "unit": "\u20b9 cr",
+      "value": 6961120.0
+    },
+    {
+      "label": "Bank Credit (\u20b9 cr)",
+      "unit": "\u20b9 cr",
+      "value": 18243972.0
+    },
+    {
+      "label": "Credit\u2013Deposit Ratio",
+      "unit": "%",
+      "value": 262.08386006849474
+    },
+    {
+      "label": "Deposit Growth 5Y CAGR",
+      "unit": "%",
+      "value": 9.299876743532254
+    }
+  ],
+  "datasets": {
+    "scb_aggregates_annual": {
+      "rows": 60,
+      "period_range": [
+        "1966-67",
+        "2025-26"
+      ],
+      "diagnostics": [
+        {
+          "series": "demand_deposits",
+          "n": 60,
+          "first": 893.0,
+          "latest": 6960631.0,
+          "min": 893.0,
+          "max": 6960631.0,
+          "min_period": "1966-67",
+          "max_period": "2025-26",
+          "mean": 1160938.3833333333,
+          "std": 1846261.4754770652,
+          "latest_vs_mean_sigma": 3.1413170310386582,
+          "growth_mean_pct": 16.741558182594936,
+          "growth_volatility_pp": 9.131889430152173,
+          "best_period": "1977-78",
+          "worst_period": "2005-06",
+          "rising_periods": 58,
+          "falling_periods": 1,
+          "regimes": {
+            "high_gt_1sd": 10,
+            "above_mean": 7,
+            "below_mean": 43,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "time_deposits",
+          "n": 57,
+          "first": 314.0,
+          "latest": 489.0,
+          "min": 314.0,
+          "max": 32555.0,
+          "min_period": "1969-70",
+          "max_period": "1995-96",
+          "mean": 11423.807017543859,
+          "std": 11638.060040903043,
+          "latest_vs_mean_sigma": -0.9395730026406861,
+          "growth_mean_pct": 9.029144905740559,
+          "growth_volatility_pp": 50.21804018727304,
+          "best_period": "2019-20",
+          "worst_period": "2020-21",
+          "rising_periods": 32,
+          "falling_periods": 24,
+          "regimes": {
+            "high_gt_1sd": 13,
+            "above_mean": 10,
+            "below_mean": 34,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "aggregate_deposits",
+          "n": 57,
+          "first": 1481.0,
+          "latest": 6961120.0,
+          "min": 1481.0,
+          "max": 6961120.0,
+          "min_period": "1969-70",
+          "max_period": "2025-26",
+          "mean": 1233413.0,
+          "std": 1869947.7358891803,
+          "latest_vs_mean_sigma": 3.0630305275759024,
+          "growth_mean_pct": 16.545042571324505,
+          "growth_volatility_pp": 7.696334189872657,
+          "best_period": "1977-78",
+          "worst_period": "2005-06",
+          "rising_periods": 55,
+          "falling_periods": 1,
+          "regimes": {
+            "high_gt_1sd": 9,
+            "above_mean": 8,
+            "below_mean": 40,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "borrowings_from_rbi",
+          "n": 34,
+          "first": 6743.0,
+          "latest": 70271.0,
+          "min": 6743.0,
+          "max": 105254.0,
+          "min_period": "1992-93",
+          "max_period": "2015-16",
+          "mean": 45429.91176470588,
+          "std": 27194.693467847002,
+          "latest_vs_mean_sigma": 0.9134535112397714,
+          "growth_mean_pct": 12.762324104916523,
+          "growth_volatility_pp": 33.38470182334526,
+          "best_period": "2025-26",
+          "worst_period": "2022-23",
+          "rising_periods": 21,
+          "falling_periods": 12,
+          "regimes": {
+            "high_gt_1sd": 5,
+            "above_mean": 11,
+            "below_mean": 11,
+            "low_lt_minus1sd": 7
+          }
+        },
+        {
+          "series": "liabilities_to_banks",
+          "n": 60,
+          "first": 2692.0,
+          "latest": 21289626.0,
+          "min": 2692.0,
+          "max": 21289626.0,
+          "min_period": "1966-67",
+          "max_period": "2025-26",
+          "mean": 2998595.3333333335,
+          "std": 5070364.6504079895,
+          "latest_vs_mean_sigma": 3.6074388979488625,
+          "growth_mean_pct": 16.59516460218468,
+          "growth_volatility_pp": 6.32341966940143,
+          "best_period": "2005-06",
+          "worst_period": "2020-21",
+          "rising_periods": 59,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 9,
+            "above_mean": 8,
+            "below_mean": 43,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "other_liabilities",
+          "n": 60,
+          "first": 2692.0,
+          "latest": 21359897.0,
+          "min": 2692.0,
+          "max": 21359897.0,
+          "min_period": "1966-67",
+          "max_period": "2025-26",
+          "mean": 3024338.933333333,
+          "std": 5087105.2978161145,
+          "latest_vs_mean_sigma": 3.6043205306833515,
+          "growth_mean_pct": 16.587141760181474,
+          "growth_volatility_pp": 6.019258378445319,
+          "best_period": "2005-06",
+          "worst_period": "2020-21",
+          "rising_periods": 59,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 9,
+            "above_mean": 8,
+            "below_mean": 43,
+            "low_lt_minus1sd": 0
+          }
+        }
+      ]
+    },
+    "scb_aggregates_monthly": {
+      "rows": 51,
+      "period_range": [
+        "2022-01",
+        "2026-03"
+      ],
+      "diagnostics": [
+        {
+          "series": "demand_deposits",
+          "n": 51,
+          "first": 1912237.0,
+          "latest": 3689274.0,
+          "min": 1912237.0,
+          "max": 3689274.0,
+          "min_period": "2022-01",
+          "max_period": "2026-03",
+          "mean": 2458526.3333333335,
+          "std": 410345.40179539804,
+          "latest_vs_mean_sigma": 2.9992968393985526,
+          "growth_mean_pct": 1.4340474187907954,
+          "growth_volatility_pp": 4.8602926563832085,
+          "best_period": "2023-06",
+          "worst_period": "2023-07",
+          "rising_periods": 29,
+          "falling_periods": 21,
+          "regimes": {
+            "high_gt_1sd": 10,
+            "above_mean": 12,
+            "below_mean": 20,
+            "low_lt_minus1sd": 9
+          }
+        },
+        {
+          "series": "time_deposits",
+          "n": 51,
+          "first": 14120289.0,
+          "latest": 22539513.0,
+          "min": 14120289.0,
+          "max": 22539513.0,
+          "min_period": "2022-01",
+          "max_period": "2026-03",
+          "mean": 17901339.11764706,
+          "std": 2407981.802181808,
+          "latest_vs_mean_sigma": 1.9261665009886768,
+          "growth_mean_pct": 0.9418127185748794,
+          "growth_volatility_pp": 0.6604730620094992,
+          "best_period": "2023-06",
+          "worst_period": "2022-05",
+          "rising_periods": 48,
+          "falling_periods": 2,
+          "regimes": {
+            "high_gt_1sd": 10,
+            "above_mean": 15,
+            "below_mean": 15,
+            "low_lt_minus1sd": 11
+          }
+        },
+        {
+          "series": "aggregate_deposits",
+          "n": 51,
+          "first": 16032526.0,
+          "latest": 26228787.0,
+          "min": 16032526.0,
+          "max": 26228787.0,
+          "min_period": "2022-01",
+          "max_period": "2026-03",
+          "mean": 20359865.470588237,
+          "std": 2799943.3277946846,
+          "latest_vs_mean_sigma": 2.096085828292208,
+          "growth_mean_pct": 0.994180768878764,
+          "growth_volatility_pp": 1.0033651055438046,
+          "best_period": "2023-06",
+          "worst_period": "2024-07",
+          "rising_periods": 44,
+          "falling_periods": 6,
+          "regimes": {
+            "high_gt_1sd": 11,
+            "above_mean": 14,
+            "below_mean": 15,
+            "low_lt_minus1sd": 11
+          }
+        },
+        {
+          "series": "borrowings_from_rbi",
+          "n": 51,
+          "first": 94286.0,
+          "latest": 256062.0,
+          "min": 1065.0,
+          "max": 354098.0,
+          "min_period": "2025-06",
+          "max_period": "2025-01",
+          "mean": 114326.66666666667,
+          "std": 94337.82696197038,
+          "latest_vs_mean_sigma": 1.5024231307603673,
+          "growth_mean_pct": 252.41849169217693,
+          "growth_volatility_pp": 1181.6001742471396,
+          "best_period": "2025-12",
+          "worst_period": "2024-07",
+          "rising_periods": 24,
+          "falling_periods": 26,
+          "regimes": {
+            "high_gt_1sd": 9,
+            "above_mean": 10,
+            "below_mean": 23,
+            "low_lt_minus1sd": 9
+          }
+        },
+        {
+          "series": "liabilities_to_banks",
+          "n": 51,
+          "first": 266584.0,
+          "latest": 549297.0,
+          "min": 251956.0,
+          "max": 549351.0,
+          "min_period": "2022-02",
+          "max_period": "2024-03",
+          "mean": 420952.56862745096,
+          "std": 94814.42658672886,
+          "latest_vs_mean_sigma": 1.3536382172300492,
+          "growth_mean_pct": 1.675191680911919,
+          "growth_volatility_pp": 7.1808014338390525,
+          "best_period": "2023-07",
+          "worst_period": "2025-09",
+          "rising_periods": 30,
+          "falling_periods": 20,
+          "regimes": {
+            "high_gt_1sd": 7,
+            "above_mean": 26,
+            "below_mean": 7,
+            "low_lt_minus1sd": 11
+          }
+        },
+        {
+          "series": "other_liabilities",
+          "n": 51,
+          "first": 605809.0,
+          "latest": 1123522.0,
+          "min": 605809.0,
+          "max": 1123522.0,
+          "min_period": "2022-01",
+          "max_period": "2026-03",
+          "mean": 885087.0196078431,
+          "std": 156087.66206071383,
+          "latest_vs_mean_sigma": 1.527570963933153,
+          "growth_mean_pct": 1.3321491379462418,
+          "growth_volatility_pp": 4.281897219741588,
+          "best_period": "2024-09",
+          "worst_period": "2024-10",
+          "rising_periods": 32,
+          "falling_periods": 18,
+          "regimes": {
+            "high_gt_1sd": 9,
+            "above_mean": 22,
+            "below_mean": 9,
+            "low_lt_minus1sd": 11
+          }
+        }
+      ]
+    },
+    "scb_growth": {
+      "rows": 55,
+      "period_range": [
+        "1970-71",
+        "2025-26"
+      ],
+      "diagnostics": [
+        {
+          "series": "demand_deposits_growth_pct",
+          "n": 55,
+          "first": 17.5,
+          "latest": 36.7,
+          "min": -29.8,
+          "max": 47.0,
+          "min_period": "1977-78",
+          "max_period": "2005-06",
+          "mean": 14.845454545454546,
+          "std": 12.059479415424356,
+          "latest_vs_mean_sigma": 1.8122295914857638,
+          "growth_mean_pct": -186.49059440059216,
+          "growth_volatility_pp": 1617.2274948771924,
+          "best_period": "1993-94",
+          "worst_period": "2009-10",
+          "rising_periods": 31,
+          "falling_periods": 23,
+          "regimes": {
+            "high_gt_1sd": 6,
+            "above_mean": 18,
+            "below_mean": 27,
+            "low_lt_minus1sd": 4
+          }
+        },
+        {
+          "series": "time_deposits_growth_pct",
+          "n": 55,
+          "first": 17.4,
+          "latest": 13.4,
+          "min": 6.1,
+          "max": 63.2,
+          "min_period": "2017-18",
+          "max_period": "1977-78",
+          "mean": 17.8,
+          "std": 7.59200359052329,
+          "latest_vs_mean_sigma": -0.5795571547795757,
+          "growth_mean_pct": 3.512833647886201,
+          "growth_volatility_pp": 29.78489868055183,
+          "best_period": "1977-78",
+          "worst_period": "1978-79",
+          "rising_periods": 26,
+          "falling_periods": 28,
+          "regimes": {
+            "high_gt_1sd": 2,
+            "above_mean": 24,
+            "below_mean": 24,
+            "low_lt_minus1sd": 5
+          }
+        },
+        {
+          "series": "deposits_growth_pct",
+          "n": 55,
+          "first": 17.5,
+          "latest": 16.2,
+          "min": 6.2,
+          "max": 26.4,
+          "min_period": "2017-18",
+          "max_period": "1977-78",
+          "mean": 16.727272727272727,
+          "std": 4.311803547432308,
+          "latest_vs_mean_sigma": -0.12228588836954779,
+          "growth_mean_pct": 3.550689556890451,
+          "growth_volatility_pp": 28.035639377552464,
+          "best_period": "2005-06",
+          "worst_period": "2017-18",
+          "rising_periods": 28,
+          "falling_periods": 26,
+          "regimes": {
+            "high_gt_1sd": 8,
+            "above_mean": 21,
+            "below_mean": 17,
+            "low_lt_minus1sd": 9
+          }
+        },
+        {
+          "series": "investments_growth_pct",
+          "n": 55,
+          "first": 19.6,
+          "latest": 3.9,
+          "min": -2.9,
+          "max": 42.6,
+          "min_period": "2005-06",
+          "max_period": "1977-78",
+          "mean": 16.729090909090907,
+          "std": 7.625266788951951,
+          "latest_vs_mean_sigma": -1.6824448591987156,
+          "growth_mean_pct": 5.921998525501827,
+          "growth_volatility_pp": 108.93991117627704,
+          "best_period": "2019-20",
+          "worst_period": "2006-07",
+          "rising_periods": 23,
+          "falling_periods": 31,
+          "regimes": {
+            "high_gt_1sd": 6,
+            "above_mean": 20,
+            "below_mean": 22,
+            "low_lt_minus1sd": 7
+          }
+        },
+        {
+          "series": "food_credit_growth_pct",
+          "n": 55,
+          "first": 282.1,
+          "latest": 92.4,
+          "min": -64.9,
+          "max": 282.1,
+          "min_period": "1988-89",
+          "max_period": "1970-71",
+          "mean": 24.76727272727273,
+          "std": 56.982528363705825,
+          "latest_vs_mean_sigma": 1.1869028843550744,
+          "growth_mean_pct": -63.11491575834952,
+          "growth_volatility_pp": 492.88790890317716,
+          "best_period": "1992-93",
+          "worst_period": "2019-20",
+          "rising_periods": 19,
+          "falling_periods": 35,
+          "regimes": {
+            "high_gt_1sd": 5,
+            "above_mean": 16,
+            "below_mean": 30,
+            "low_lt_minus1sd": 4
+          }
+        },
+        {
+          "series": "non_food_credit_growth_pct",
+          "n": 55,
+          "first": 14.2,
+          "latest": 16.9,
+          "min": 5.5,
+          "max": 31.8,
+          "min_period": "2020-21",
+          "max_period": "2005-06",
+          "mean": 16.8,
+          "std": 6.050711620223783,
+          "latest_vs_mean_sigma": 0.016526981663736836,
+          "growth_mean_pct": 12.971212077837787,
+          "growth_volatility_pp": 72.47538673876065,
+          "best_period": "1994-95",
+          "worst_period": "1993-94",
+          "rising_periods": 26,
+          "falling_periods": 28,
+          "regimes": {
+            "high_gt_1sd": 7,
+            "above_mean": 18,
+            "below_mean": 22,
+            "low_lt_minus1sd": 8
+          }
+        }
+      ]
+    }
+  }
+}

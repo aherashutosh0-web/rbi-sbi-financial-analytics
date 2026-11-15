@@ -1,0 +1,6 @@
+column_name,null_count,negative_count,row_count
+currency_in_circulation,0,0,54
+cash_with_banks,0,0,54
+currency_with_public,0,0,54
+others_deposits_with_rbi,0,0,54
+bankers_deposits_with_rbi,0,0,54

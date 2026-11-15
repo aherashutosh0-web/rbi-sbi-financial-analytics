@@ -1,0 +1,145 @@
+{
+  "project": "P10",
+  "title": "Digital Payments & UPI Transformation Tracker",
+  "kpis": [
+    {
+      "label": "UPI Volume (mn txn)",
+      "unit": "mn txn",
+      "value": null
+    },
+    {
+      "label": "UPI Value (\u20b9 cr)",
+      "unit": "\u20b9 cr",
+      "value": null
+    },
+    {
+      "label": "UPI Volume YoY",
+      "unit": "%",
+      "value": null
+    },
+    {
+      "label": "Digital Txn CAGR 5Y",
+      "unit": "%",
+      "value": null
+    }
+  ],
+  "datasets": {
+    "payment_systems": {
+      "rows": 3,
+      "period_range": [
+        "2021-22",
+        "2023-24"
+      ],
+      "diagnostics": [
+        {
+          "series": "rtgs_volume_mn",
+          "n": 0
+        },
+        {
+          "series": "rtgs_value_crore",
+          "n": 0
+        },
+        {
+          "series": "aeps_volume_mn",
+          "n": 2,
+          "first": 0.4,
+          "latest": 0.3,
+          "min": 0.3,
+          "max": 0.4,
+          "min_period": "2022-23",
+          "max_period": "2021-22",
+          "mean": 0.35,
+          "std": 0.07071067811865477,
+          "latest_vs_mean_sigma": -0.7071067811865472,
+          "growth_mean_pct": -25.00000000000001,
+          "growth_volatility_pp": NaN,
+          "best_period": "2022-23",
+          "worst_period": "2022-23",
+          "rising_periods": 0,
+          "falling_periods": 1,
+          "regimes": {
+            "high_gt_1sd": 0,
+            "above_mean": 1,
+            "below_mean": 1,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "aeps_value_crore",
+          "n": 2,
+          "first": 190.0,
+          "latest": 170.0,
+          "min": 170.0,
+          "max": 190.0,
+          "min_period": "2022-23",
+          "max_period": "2021-22",
+          "mean": 180.0,
+          "std": 14.142135623730951,
+          "latest_vs_mean_sigma": -0.7071067811865475,
+          "growth_mean_pct": -10.526315789473683,
+          "growth_volatility_pp": NaN,
+          "best_period": "2022-23",
+          "worst_period": "2022-23",
+          "rising_periods": 0,
+          "falling_periods": 1,
+          "regimes": {
+            "high_gt_1sd": 0,
+            "above_mean": 1,
+            "below_mean": 1,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "imps_volume_mn",
+          "n": 2,
+          "first": 5625.0,
+          "latest": 4943.1,
+          "min": 4943.1,
+          "max": 5625.0,
+          "min_period": "2022-23",
+          "max_period": "2021-22",
+          "mean": 5284.05,
+          "std": 482.1761140911065,
+          "latest_vs_mean_sigma": -0.7071067811865475,
+          "growth_mean_pct": -12.12266666666666,
+          "growth_volatility_pp": NaN,
+          "best_period": "2022-23",
+          "worst_period": "2022-23",
+          "rising_periods": 0,
+          "falling_periods": 1,
+          "regimes": {
+            "high_gt_1sd": 0,
+            "above_mean": 1,
+            "below_mean": 1,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "imps_value_crore",
+          "n": 2,
+          "first": 7139110.0,
+          "latest": 7669929.0,
+          "min": 7139110.0,
+          "max": 7669929.0,
+          "min_period": "2021-22",
+          "max_period": "2022-23",
+          "mean": 7404519.5,
+          "std": 375345.714482662,
+          "latest_vs_mean_sigma": 0.7071067811865475,
+          "growth_mean_pct": 7.435366593314852,
+          "growth_volatility_pp": NaN,
+          "best_period": "2022-23",
+          "worst_period": "2022-23",
+          "rising_periods": 1,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 0,
+            "above_mean": 1,
+            "below_mean": 1,
+            "low_lt_minus1sd": 0
+          }
+        }
+      ]
+    }
+  }
+}

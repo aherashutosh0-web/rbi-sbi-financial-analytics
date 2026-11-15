@@ -1,0 +1,6 @@
+column_name,null_count,negative_count,row_count
+cpi_iw,0,0,33
+cpi_iw_food,0,0,33
+cpi_al,1,0,33
+cpi_rural,18,0,33
+cpi_urban,18,0,33

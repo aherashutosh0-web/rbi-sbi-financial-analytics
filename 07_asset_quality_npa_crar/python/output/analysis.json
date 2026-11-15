@@ -1,0 +1,322 @@
+{
+  "project": "P07",
+  "title": "Asset Quality Dashboard \u2014 NPAs & Capital Adequacy (CRAR)",
+  "kpis": [
+    {
+      "label": "System Gross NPA %",
+      "unit": "%",
+      "value": 2.6
+    },
+    {
+      "label": "System Net NPA %",
+      "unit": "%",
+      "value": 0.5
+    },
+    {
+      "label": "SBI Group Gross NPA %",
+      "unit": "%",
+      "value": null
+    },
+    {
+      "label": "Banks above 10% CRAR",
+      "unit": "count",
+      "value": 77.0
+    }
+  ],
+  "datasets": {
+    "npa_bank_group": {
+      "rows": 12,
+      "period_range": [
+        "2013-14",
+        "2024-25"
+      ],
+      "diagnostics": [
+        {
+          "series": "gross_npa_amount_all",
+          "n": 12,
+          "first": 227264.0,
+          "latest": 283650.0,
+          "min": 227264.0,
+          "max": 895601.0,
+          "min_period": "2013-14",
+          "max_period": "2017-18",
+          "mean": 521171.4166666667,
+          "std": 211610.7094662522,
+          "latest_vs_mean_sigma": -1.122445160104464,
+          "growth_mean_pct": 6.2710219737177315,
+          "growth_volatility_pp": 35.074525397231014,
+          "best_period": "2015-16",
+          "worst_period": "2022-23",
+          "rising_periods": 4,
+          "falling_periods": 7,
+          "regimes": {
+            "high_gt_1sd": 2,
+            "above_mean": 5,
+            "below_mean": 2,
+            "low_lt_minus1sd": 3
+          }
+        },
+        {
+          "series": "gross_npa_to_advances_pct_all",
+          "n": 12,
+          "first": 4.4,
+          "latest": 2.6,
+          "min": 2.6,
+          "max": 14.6,
+          "min_period": "2024-25",
+          "max_period": "2017-18",
+          "mean": 7.866666666666666,
+          "std": 3.8024712857282537,
+          "latest_vs_mean_sigma": -1.3850641519461173,
+          "growth_mean_pct": -0.016140178916287686,
+          "growth_volatility_pp": 35.3425974150771,
+          "best_period": "2015-16",
+          "worst_period": "2022-23",
+          "rising_periods": 4,
+          "falling_periods": 7,
+          "regimes": {
+            "high_gt_1sd": 2,
+            "above_mean": 4,
+            "below_mean": 4,
+            "low_lt_minus1sd": 2
+          }
+        },
+        {
+          "series": "net_npa_amount_all",
+          "n": 12,
+          "first": 130394.0,
+          "latest": 55634.0,
+          "min": 55634.0,
+          "max": 454473.0,
+          "min_period": "2024-25",
+          "max_period": "2017-18",
+          "mean": 212185.75,
+          "std": 125873.07877968693,
+          "latest_vs_mean_sigma": -1.2437270266027998,
+          "growth_mean_pct": -1.5960121158224034,
+          "growth_volatility_pp": 40.29420499777191,
+          "best_period": "2015-16",
+          "worst_period": "2018-19",
+          "rising_periods": 4,
+          "falling_periods": 7,
+          "regimes": {
+            "high_gt_1sd": 2,
+            "above_mean": 3,
+            "below_mean": 5,
+            "low_lt_minus1sd": 2
+          }
+        },
+        {
+          "series": "net_npa_to_advances_pct_all",
+          "n": 12,
+          "first": 2.6,
+          "latest": 0.5,
+          "min": 0.5,
+          "max": 8.0,
+          "min_period": "2024-25",
+          "max_period": "2017-18",
+          "mean": 3.5333333333333337,
+          "std": 2.3925389075712906,
+          "latest_vs_mean_sigma": -1.2678303051767401,
+          "growth_mean_pct": -7.21528849949369,
+          "growth_volatility_pp": 41.70678235636555,
+          "best_period": "2015-16",
+          "worst_period": "2022-23",
+          "rising_periods": 4,
+          "falling_periods": 7,
+          "regimes": {
+            "high_gt_1sd": 2,
+            "above_mean": 3,
+            "below_mean": 5,
+            "low_lt_minus1sd": 2
+          }
+        },
+        {
+          "series": "advances_gross_all",
+          "n": 12,
+          "first": 5215920.0,
+          "latest": 10977762.0,
+          "min": 5215920.0,
+          "max": 10977762.0,
+          "min_period": "2013-14",
+          "max_period": "2024-25",
+          "mean": 7102872.833333333,
+          "std": 1789739.3292353463,
+          "latest_vs_mean_sigma": 2.16505784019519,
+          "growth_mean_pct": 7.10532792167807,
+          "growth_volatility_pp": 5.036844892911754,
+          "best_period": "2022-23",
+          "worst_period": "2016-17",
+          "rising_periods": 11,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 2,
+            "above_mean": 2,
+            "below_mean": 7,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "advances_net_all",
+          "n": 12,
+          "first": 5101137.0,
+          "latest": 10750234.0,
+          "min": 5101137.0,
+          "max": 10750234.0,
+          "min_period": "2013-14",
+          "max_period": "2024-25",
+          "mean": 6784000.666666667,
+          "std": 1795977.1464076613,
+          "latest_vs_mean_sigma": 2.2083985541055733,
+          "growth_mean_pct": 7.162976382591436,
+          "growth_volatility_pp": 6.014982192003301,
+          "best_period": "2022-23",
+          "worst_period": "2016-17",
+          "rising_periods": 10,
+          "falling_periods": 1,
+          "regimes": {
+            "high_gt_1sd": 2,
+            "above_mean": 2,
+            "below_mean": 8,
+            "low_lt_minus1sd": 0
+          }
+        }
+      ]
+    },
+    "crar_distribution": {
+      "rows": 13,
+      "period_range": [
+        "2012-13",
+        "2024-25"
+      ],
+      "diagnostics": [
+        {
+          "series": "banks_below_9pct",
+          "n": 13,
+          "first": 0.0,
+          "latest": 0.0,
+          "min": 0.0,
+          "max": 3.0,
+          "min_period": "2012-13",
+          "max_period": "2019-20",
+          "mean": 0.6153846153846154,
+          "std": 0.9607689228305228,
+          "latest_vs_mean_sigma": -0.6405126152203485,
+          "growth_mean_pct": Infinity,
+          "growth_volatility_pp": NaN,
+          "best_period": "2013-14",
+          "worst_period": "2014-15",
+          "rising_periods": 5,
+          "falling_periods": 3,
+          "regimes": {
+            "high_gt_1sd": 2,
+            "above_mean": 3,
+            "below_mean": 8,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "banks_9_to_10pct",
+          "n": 13,
+          "first": 0.0,
+          "latest": 0.0,
+          "min": 0.0,
+          "max": 6.0,
+          "min_period": "2012-13",
+          "max_period": "2017-18",
+          "mean": 1.2307692307692308,
+          "std": 1.877669040497027,
+          "latest_vs_mean_sigma": -0.6554771923189621,
+          "growth_mean_pct": Infinity,
+          "growth_volatility_pp": NaN,
+          "best_period": "2013-14",
+          "worst_period": "2019-20",
+          "rising_periods": 3,
+          "falling_periods": 4,
+          "regimes": {
+            "high_gt_1sd": 2,
+            "above_mean": 2,
+            "below_mean": 9,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "banks_10_to_12pct",
+          "n": 13,
+          "first": 0.0,
+          "latest": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "min_period": "2012-13",
+          "max_period": "2012-13",
+          "mean": 0.0,
+          "std": 0.0,
+          "latest_vs_mean_sigma": null
+        },
+        {
+          "series": "banks_above_10pct",
+          "n": 13,
+          "first": 85.0,
+          "latest": 77.0,
+          "min": 77.0,
+          "max": 91.0,
+          "min_period": "2022-23",
+          "max_period": "2016-17",
+          "mean": 82.46153846153847,
+          "std": 5.15776735638242,
+          "latest_vs_mean_sigma": -1.0588958524428498,
+          "growth_mean_pct": -0.6908010692895556,
+          "growth_volatility_pp": 5.262129481386397,
+          "best_period": "2014-15",
+          "worst_period": "2017-18",
+          "rising_periods": 4,
+          "falling_periods": 5,
+          "regimes": {
+            "high_gt_1sd": 3,
+            "above_mean": 3,
+            "below_mean": 5,
+            "low_lt_minus1sd": 2
+          }
+        },
+        {
+          "series": "banks_above_12pct",
+          "n": 13,
+          "first": 0.0,
+          "latest": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "min_period": "2012-13",
+          "max_period": "2012-13",
+          "mean": 0.0,
+          "std": 0.0,
+          "latest_vs_mean_sigma": null
+        },
+        {
+          "series": "weighted_avg_crar",
+          "n": 13,
+          "first": 13.9,
+          "latest": 17.4,
+          "min": 13.0,
+          "max": 17.4,
+          "min_period": "2013-14",
+          "max_period": "2024-25",
+          "mean": 14.953846153846154,
+          "std": 1.7047069076605632,
+          "latest_vs_mean_sigma": 1.4349410066688815,
+          "growth_mean_pct": 1.9573313236840955,
+          "growth_volatility_pp": 3.882369507421271,
+          "best_period": "2020-21",
+          "worst_period": "2013-14",
+          "rising_periods": 9,
+          "falling_periods": 2,
+          "regimes": {
+            "high_gt_1sd": 4,
+            "above_mean": 1,
+            "below_mean": 6,
+            "low_lt_minus1sd": 2
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+verification — P05 Sectoral Deployment of Bank Credit Analysis
+==========================================================================================
+  PASS Q01  (1 rows × 5 cols)
+  PASS Q02  (1 rows × 10 cols)
+  PASS Q03  (5 rows × 4 cols)
+  PASS Q04  (5 rows × 5 cols)
+  PASS Q05  (5 rows × 3 cols)
+  PASS Q06  (5 rows × 3 cols)
+  PASS Q07  (5 rows × 4 cols)
+  PASS Q08  (1 rows × 5 cols)
+  PASS Q09  (1 rows × 6 cols)
+  PASS Q10  (0 rows × 4 cols)
+  PASS Q11  (5 rows × 4 cols)
+  PASS Q12  (5 rows × 4 cols)
+  PASS Q13  (1 rows × 6 cols)
+  PASS Q14  (5 rows × 6 cols)

@@ -1,0 +1,505 @@
+{
+  "project": "P05",
+  "title": "Sectoral Deployment of Bank Credit Analysis",
+  "kpis": [
+    {
+      "label": "Total Non-Food Credit (\u20b9 cr)",
+      "unit": "\u20b9 cr",
+      "value": 21291163.0
+    },
+    {
+      "label": "Industry Share",
+      "unit": "%",
+      "value": 21.53148703055817
+    },
+    {
+      "label": "Agriculture Share",
+      "unit": "%",
+      "value": 12.419471871968666
+    },
+    {
+      "label": "Services Share",
+      "unit": "%",
+      "value": 28.46908832551796
+    }
+  ],
+  "datasets": {
+    "credit_sectoral_annual": {
+      "rows": 5,
+      "period_range": [
+        "2021-22",
+        "2025-26"
+      ],
+      "diagnostics": [
+        {
+          "series": "agriculture",
+          "n": 5,
+          "first": 1496484.0,
+          "latest": 2644250.0,
+          "min": 1496484.0,
+          "max": 2644250.0,
+          "min_period": "2021-22",
+          "max_period": "2025-26",
+          "mean": 2045091.0,
+          "std": 452976.8399300344,
+          "latest_vs_mean_sigma": 1.3227144241911892,
+          "growth_mean_pct": 15.34399900722857,
+          "growth_volatility_pp": 3.905961966719994,
+          "best_period": "2023-24",
+          "worst_period": "2024-25",
+          "rising_periods": 4,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 2,
+            "below_mean": 1,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "industry",
+          "n": 5,
+          "first": 3181100.0,
+          "latest": 4584304.0,
+          "min": 3181100.0,
+          "max": 4584304.0,
+          "min_period": "2021-22",
+          "max_period": "2025-26",
+          "mean": 3759972.6,
+          "std": 553729.132687454,
+          "latest_vs_mean_sigma": 1.4886906816681509,
+          "growth_mean_pct": 9.616809785601921,
+          "growth_volatility_pp": 3.8957610095273973,
+          "best_period": "2025-26",
+          "worst_period": "2022-23",
+          "rising_periods": 4,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 1,
+            "below_mean": 2,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "services",
+          "n": 5,
+          "first": 3112541.0,
+          "latest": 6061400.0,
+          "min": 3112541.0,
+          "max": 6061400.0,
+          "min_period": "2021-22",
+          "max_period": "2025-26",
+          "mean": 4506709.6,
+          "std": 1154080.1222661275,
+          "latest_vs_mean_sigma": 1.3471251865487839,
+          "growth_mean_pct": 18.192643717961538,
+          "growth_volatility_pp": 4.3648624471040165,
+          "best_period": "2023-24",
+          "worst_period": "2024-25",
+          "rising_periods": 4,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 2,
+            "below_mean": 1,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "retail",
+          "n": 5,
+          "first": 348418.0,
+          "latest": 600723.0,
+          "min": 348418.0,
+          "max": 600723.0,
+          "min_period": "2021-22",
+          "max_period": "2025-26",
+          "mean": 480794.8,
+          "std": 97388.06503981892,
+          "latest_vs_mean_sigma": 1.2314465838392532,
+          "growth_mean_pct": 14.695673177187812,
+          "growth_volatility_pp": 5.788961755004215,
+          "best_period": "2022-23",
+          "worst_period": "2024-25",
+          "rising_periods": 4,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 2,
+            "below_mean": 1,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "total_non_food_credit",
+          "n": 5,
+          "first": 11836304.0,
+          "latest": 21291163.0,
+          "min": 11836304.0,
+          "max": 21291163.0,
+          "min_period": "2021-22",
+          "max_period": "2025-26",
+          "mean": 16343751.2,
+          "std": 3747794.3435407043,
+          "latest_vs_mean_sigma": 1.3200862551401276,
+          "growth_mean_pct": 15.868305613041327,
+          "growth_volatility_pp": 4.253935555876743,
+          "best_period": "2023-24",
+          "worst_period": "2024-25",
+          "rising_periods": 4,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 2,
+            "below_mean": 1,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "agriculture_share_pct",
+          "n": 5,
+          "first": 12.643169692160662,
+          "latest": 12.419471871968666,
+          "min": 12.419471871968666,
+          "max": 12.643169692160662,
+          "min_period": "2025-26",
+          "max_period": "2021-22",
+          "mean": 12.5317158728688,
+          "std": 0.10605761701788445,
+          "latest_vs_mean_sigma": -1.0583304062093541,
+          "growth_mean_pct": -0.4444652416990935,
+          "growth_volatility_pp": 0.4688863431367363,
+          "best_period": "2022-23",
+          "worst_period": "2023-24",
+          "rising_periods": 0,
+          "falling_periods": 4,
+          "regimes": {
+            "high_gt_1sd": 2,
+            "above_mean": 0,
+            "below_mean": 2,
+            "low_lt_minus1sd": 1
+          }
+        }
+      ]
+    },
+    "credit_sectoral_monthly": {
+      "rows": 6,
+      "period_range": [
+        "2025-07-25",
+        "2025-12-31"
+      ],
+      "diagnostics": [
+        {
+          "series": "agriculture",
+          "n": 6,
+          "first": 2313847.0,
+          "latest": 2509200.0,
+          "min": 2313847.0,
+          "max": 2509200.0,
+          "min_period": "2025-07-25",
+          "max_period": "2025-12-31",
+          "mean": 2388170.5,
+          "std": 72037.13410942997,
+          "latest_vs_mean_sigma": 1.6800987642865808,
+          "growth_mean_pct": 1.641276768661539,
+          "growth_volatility_pp": 1.339823122101474,
+          "best_period": "2025-12-31",
+          "worst_period": "2025-08-22",
+          "rising_periods": 5,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 2,
+            "below_mean": 2,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "industry",
+          "n": 6,
+          "first": 4002277.0,
+          "latest": 4390876.0,
+          "min": 4002277.0,
+          "max": 4390876.0,
+          "min_period": "2025-07-25",
+          "max_period": "2025-12-31",
+          "mean": 4166238.1666666665,
+          "std": 137068.68655008945,
+          "latest_vs_mean_sigma": 1.6388705472219096,
+          "growth_mean_pct": 1.8772806534548225,
+          "growth_volatility_pp": 1.310820399525875,
+          "best_period": "2025-12-31",
+          "worst_period": "2025-11-28",
+          "rising_periods": 5,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 2,
+            "below_mean": 2,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "services",
+          "n": 6,
+          "first": 5040440.0,
+          "latest": 5661328.0,
+          "min": 5040440.0,
+          "max": 5661328.0,
+          "min_period": "2025-07-25",
+          "max_period": "2025-12-31",
+          "mean": 5269261.0,
+          "std": 235585.19368585115,
+          "latest_vs_mean_sigma": 1.664225980699002,
+          "growth_mean_pct": 2.3714732001904704,
+          "growth_volatility_pp": 2.3240773002876027,
+          "best_period": "2025-12-31",
+          "worst_period": "2025-11-28",
+          "rising_periods": 5,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 2,
+            "below_mean": 3,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "retail",
+          "n": 6,
+          "first": 542131.0,
+          "latest": 592708.0,
+          "min": 542131.0,
+          "max": 592708.0,
+          "min_period": "2025-07-25",
+          "max_period": "2025-12-31",
+          "mean": 564285.1666666666,
+          "std": 18671.080605221185,
+          "latest_vs_mean_sigma": 1.5222918230766571,
+          "growth_mean_pct": 1.8049145322011784,
+          "growth_volatility_pp": 1.1311878484087086,
+          "best_period": "2025-12-31",
+          "worst_period": "2025-11-28",
+          "rising_periods": 5,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 2,
+            "below_mean": 2,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "total_non_food_credit",
+          "n": 6,
+          "first": 18445197.0,
+          "latest": 20234543.0,
+          "min": 18445197.0,
+          "max": 20234543.0,
+          "min_period": "2025-07-25",
+          "max_period": "2025-12-31",
+          "mean": 19149928.333333332,
+          "std": 660975.2629639528,
+          "latest_vs_mean_sigma": 1.640930799441762,
+          "growth_mean_pct": 1.876678952290951,
+          "growth_volatility_pp": 1.4031428175379577,
+          "best_period": "2025-12-31",
+          "worst_period": "2025-11-28",
+          "rising_periods": 5,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 2,
+            "below_mean": 2,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "agriculture_share_pct",
+          "n": 6,
+          "first": 12.544441786119172,
+          "latest": 12.400576578378864,
+          "min": 12.400576578378864,
+          "max": 12.544441786119172,
+          "min_period": "2025-12-31",
+          "max_period": "2025-07-25",
+          "mean": 12.472471782557818,
+          "std": 0.05845244928857316,
+          "latest_vs_mean_sigma": -1.229977615206776,
+          "growth_mean_pct": -0.23000744262294592,
+          "growth_volatility_pp": 0.32391988645019304,
+          "best_period": "2025-09-19",
+          "worst_period": "2025-10-31",
+          "rising_periods": 1,
+          "falling_periods": 4,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 2,
+            "below_mean": 2,
+            "low_lt_minus1sd": 1
+          }
+        }
+      ]
+    },
+    "credit_industry_annual": {
+      "rows": 5,
+      "period_range": [
+        "2021-22",
+        "2025-26"
+      ],
+      "diagnostics": [
+        {
+          "series": "mining",
+          "n": 5,
+          "first": 50353.0,
+          "latest": 60931.0,
+          "min": 50353.0,
+          "max": 60931.0,
+          "min_period": "2021-22",
+          "max_period": "2025-26",
+          "mean": 56508.6,
+          "std": 4375.053291104006,
+          "latest_vs_mean_sigma": 1.0108219730699664,
+          "growth_mean_pct": 5.4157928130428274,
+          "growth_volatility_pp": 12.129932667715837,
+          "best_period": "2022-23",
+          "worst_period": "2023-24",
+          "rising_periods": 3,
+          "falling_periods": 1,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 2,
+            "below_mean": 1,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "food_processing",
+          "n": 5,
+          "first": 171989.0,
+          "latest": 250187.0,
+          "min": 171989.0,
+          "max": 250187.0,
+          "min_period": "2021-22",
+          "max_period": "2025-26",
+          "mean": 206467.2,
+          "std": 31169.961857532002,
+          "latest_vs_mean_sigma": 1.4026260346364654,
+          "growth_mean_pct": 9.91605033254912,
+          "growth_volatility_pp": 5.238164003523974,
+          "best_period": "2023-24",
+          "worst_period": "2024-25",
+          "rising_periods": 4,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 2,
+            "below_mean": 1,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "textiles",
+          "n": 5,
+          "first": 224315.0,
+          "latest": 301868.0,
+          "min": 224315.0,
+          "max": 301868.0,
+          "min_period": "2021-22",
+          "max_period": "2025-26",
+          "mean": 257954.6,
+          "std": 32414.400970864786,
+          "latest_vs_mean_sigma": 1.354749700278926,
+          "growth_mean_pct": 7.752260284411411,
+          "growth_volatility_pp": 3.6210943191348535,
+          "best_period": "2023-24",
+          "worst_period": "2022-23",
+          "rising_periods": 4,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 1,
+            "below_mean": 2,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "chemicals",
+          "n": 5,
+          "first": 203139.0,
+          "latest": 307906.0,
+          "min": 203139.0,
+          "max": 307906.0,
+          "min_period": "2021-22",
+          "max_period": "2025-26",
+          "mean": 250457.2,
+          "std": 40428.21542808933,
+          "latest_vs_mean_sigma": 1.4210075659210235,
+          "growth_mean_pct": 10.99020511155207,
+          "growth_volatility_pp": 3.1214312607393078,
+          "best_period": "2025-26",
+          "worst_period": "2024-25",
+          "rising_periods": 4,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 1,
+            "below_mean": 2,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "infrastructure",
+          "n": 5,
+          "first": 1212648.0,
+          "latest": 1490126.0,
+          "min": 1212648.0,
+          "max": 1490126.0,
+          "min_period": "2021-22",
+          "max_period": "2025-26",
+          "mean": 1323420.0,
+          "std": 113812.37286648584,
+          "latest_vs_mean_sigma": 1.4647440853866045,
+          "growth_mean_pct": 5.347334899138511,
+          "growth_volatility_pp": 4.133949415608249,
+          "best_period": "2025-26",
+          "worst_period": "2022-23",
+          "rising_periods": 4,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 2,
+            "below_mean": 2,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "basic_metal",
+          "n": 5,
+          "first": 286129.0,
+          "latest": 518062.0,
+          "min": 286129.0,
+          "max": 518062.0,
+          "min_period": "2021-22",
+          "max_period": "2025-26",
+          "mean": 392973.6,
+          "std": 88462.66055686997,
+          "latest_vs_mean_sigma": 1.4140248463314582,
+          "growth_mean_pct": 16.054935604796743,
+          "growth_volatility_pp": 4.152634749717659,
+          "best_period": "2022-23",
+          "worst_period": "2023-24",
+          "rising_periods": 4,
+          "falling_periods": 0,
+          "regimes": {
+            "high_gt_1sd": 1,
+            "above_mean": 1,
+            "below_mean": 2,
+            "low_lt_minus1sd": 1
+          }
+        }
+      ]
+    }
+  }
+}

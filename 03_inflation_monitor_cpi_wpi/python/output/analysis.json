@@ -1,0 +1,548 @@
+{
+  "project": "P03",
+  "title": "Inflation Monitor \u2014 CPI & WPI Analytics",
+  "kpis": [
+    {
+      "label": "Latest CPI (Index)",
+      "unit": "index",
+      "value": 107.3
+    },
+    {
+      "label": "CPI YoY",
+      "unit": "%",
+      "value": 0.038722168441432725
+    },
+    {
+      "label": "Latest WPI (Index)",
+      "unit": "index",
+      "value": 110.2
+    },
+    {
+      "label": "CPI\u2013WPI Gap (pp)",
+      "unit": "pp",
+      "value": 2.8999999999999995
+    }
+  ],
+  "datasets": {
+    "cpi_annual": {
+      "rows": 33,
+      "period_range": [
+        "1993-94",
+        "2025-26"
+      ],
+      "diagnostics": [
+        {
+          "series": "cpi_iw",
+          "n": 33,
+          "first": 258.0,
+          "latest": 147.0,
+          "min": 117.0,
+          "max": 520.0,
+          "min_period": "2005-06",
+          "max_period": "2004-05",
+          "mean": 267.3636363636364,
+          "std": 126.84410170111828,
+          "latest_vs_mean_sigma": -0.9489099985685439,
+          "growth_mean_pct": 1.8810657463499576,
+          "growth_volatility_pp": 19.27850775975214,
+          "best_period": "1998-99",
+          "worst_period": "2005-06",
+          "rising_periods": 30,
+          "falling_periods": 2,
+          "regimes": {
+            "high_gt_1sd": 7,
+            "above_mean": 8,
+            "below_mean": 11,
+            "low_lt_minus1sd": 7
+          }
+        },
+        {
+          "series": "cpi_iw_food",
+          "n": 33,
+          "first": 272.0,
+          "latest": 150.6,
+          "min": 115.0,
+          "max": 506.0,
+          "min_period": "2005-06",
+          "max_period": "2004-05",
+          "mean": 278.71515151515155,
+          "std": 128.0913836905417,
+          "latest_vs_mean_sigma": -1.0001855536564994,
+          "growth_mean_pct": 1.8818514105031912,
+          "growth_volatility_pp": 19.63932938452844,
+          "best_period": "2009-10",
+          "worst_period": "2005-06",
+          "rising_periods": 30,
+          "falling_periods": 2,
+          "regimes": {
+            "high_gt_1sd": 7,
+            "above_mean": 9,
+            "below_mean": 8,
+            "low_lt_minus1sd": 9
+          }
+        },
+        {
+          "series": "cpi_al",
+          "n": 32,
+          "first": 1114.0,
+          "latest": 1299.0,
+          "min": 234.0,
+          "max": 1299.0,
+          "min_period": "1995-96",
+          "max_period": "2024-25",
+          "mean": 658.9375,
+          "std": 350.2087798958345,
+          "latest_vs_mean_sigma": 1.8276597753785018,
+          "growth_mean_pct": 3.5114842287865136,
+          "growth_volatility_pp": 16.11574967857913,
+          "best_period": "2009-10",
+          "worst_period": "1995-96",
+          "rising_periods": 29,
+          "falling_periods": 2,
+          "regimes": {
+            "high_gt_1sd": 7,
+            "above_mean": 8,
+            "below_mean": 11,
+            "low_lt_minus1sd": 6
+          }
+        },
+        {
+          "series": "cpi_rural",
+          "n": 15,
+          "first": 92.8,
+          "latest": 103.6,
+          "min": 92.8,
+          "max": 194.9,
+          "min_period": "2011-12",
+          "max_period": "2024-25",
+          "mean": 139.49333333333334,
+          "std": 31.235864612576968,
+          "latest_vs_mean_sigma": -1.1491064447398414,
+          "growth_mean_pct": 2.1271564823675404,
+          "growth_volatility_pp": 14.247628945179985,
+          "best_period": "2012-13",
+          "worst_period": "2025-26",
+          "rising_periods": 13,
+          "falling_periods": 1,
+          "regimes": {
+            "high_gt_1sd": 3,
+            "above_mean": 4,
+            "below_mean": 5,
+            "low_lt_minus1sd": 3
+          }
+        },
+        {
+          "series": "cpi_urban",
+          "n": 15,
+          "first": 93.8,
+          "latest": 103.5,
+          "min": 93.8,
+          "max": 190.0,
+          "min_period": "2011-12",
+          "max_period": "2024-25",
+          "mean": 137.27333333333337,
+          "std": 30.160581338340723,
+          "latest_vs_mean_sigma": -1.119783897878654,
+          "growth_mean_pct": 1.942981598152338,
+          "growth_volatility_pp": 13.776699521923577,
+          "best_period": "2013-14",
+          "worst_period": "2025-26",
+          "rising_periods": 13,
+          "falling_periods": 1,
+          "regimes": {
+            "high_gt_1sd": 3,
+            "above_mean": 4,
+            "below_mean": 5,
+            "low_lt_minus1sd": 3
+          }
+        },
+        {
+          "series": "cpi_combined",
+          "n": 15,
+          "first": 93.3,
+          "latest": 103.5,
+          "min": 93.3,
+          "max": 192.6,
+          "min_period": "2011-12",
+          "max_period": "2024-25",
+          "mean": 138.45333333333332,
+          "std": 30.718511558683183,
+          "latest_vs_mean_sigma": -1.1378589508336083,
+          "growth_mean_pct": 2.0352702645736107,
+          "growth_volatility_pp": 14.029001740652976,
+          "best_period": "2012-13",
+          "worst_period": "2025-26",
+          "rising_periods": 13,
+          "falling_periods": 1,
+          "regimes": {
+            "high_gt_1sd": 3,
+            "above_mean": 4,
+            "below_mean": 5,
+            "low_lt_minus1sd": 3
+          }
+        }
+      ]
+    },
+    "cpi_monthly": {
+      "rows": 27,
+      "period_range": [
+        "2024-04",
+        "2026-06"
+      ],
+      "diagnostics": [
+        {
+          "series": "cpi_rural",
+          "n": 21,
+          "first": 188.5,
+          "latest": 199.9,
+          "min": 188.5,
+          "max": 199.9,
+          "min_period": "2024-04",
+          "max_period": "2025-12",
+          "mean": 196.02380952380952,
+          "std": 3.269694903489431,
+          "latest_vs_mean_sigma": 1.1854899587278929,
+          "growth_mean_pct": 0.29656299080824344,
+          "growth_volatility_pp": 0.7317288587522609,
+          "best_period": "2024-07",
+          "worst_period": "2025-01",
+          "rising_periods": 15,
+          "falling_periods": 5,
+          "regimes": {
+            "high_gt_1sd": 4,
+            "above_mean": 6,
+            "below_mean": 8,
+            "low_lt_minus1sd": 3
+          }
+        },
+        {
+          "series": "cpi_urban",
+          "n": 21,
+          "first": 184.7,
+          "latest": 195.9,
+          "min": 184.7,
+          "max": 195.9,
+          "min_period": "2024-04",
+          "max_period": "2025-11",
+          "mean": 191.71904761904764,
+          "std": 3.1297953683298627,
+          "latest_vs_mean_sigma": 1.33585486874288,
+          "growth_mean_pct": 0.29633044544697007,
+          "growth_volatility_pp": 0.570263098651765,
+          "best_period": "2024-07",
+          "worst_period": "2025-01",
+          "rising_periods": 12,
+          "falling_periods": 6,
+          "regimes": {
+            "high_gt_1sd": 5,
+            "above_mean": 5,
+            "below_mean": 8,
+            "low_lt_minus1sd": 3
+          }
+        },
+        {
+          "series": "cpi_index",
+          "n": 27,
+          "first": 191.9,
+          "latest": 107.3,
+          "min": 101.8,
+          "max": 209.4,
+          "min_period": "2025-01",
+          "max_period": "2024-10",
+          "mean": 136.9148148148148,
+          "std": 47.047551262229156,
+          "latest_vs_mean_sigma": -0.6294655942824862,
+          "growth_mean_pct": -1.4668559349867845,
+          "growth_volatility_pp": 10.047652467563244,
+          "best_period": "2024-06",
+          "worst_period": "2025-01",
+          "rising_periods": 22,
+          "falling_periods": 4,
+          "regimes": {
+            "high_gt_1sd": 9,
+            "above_mean": 0,
+            "below_mean": 18,
+            "low_lt_minus1sd": 0
+          }
+        }
+      ]
+    },
+    "wpi_annual": {
+      "rows": 46,
+      "period_range": [
+        "1980-81",
+        "2025-26"
+      ],
+      "diagnostics": [
+        {
+          "series": "wpi_all_commodities",
+          "n": 46,
+          "first": 257.2,
+          "latest": 101.4,
+          "min": 99.3,
+          "max": 281.3,
+          "min_period": "2023-24",
+          "max_period": "1981-82",
+          "mean": 143.67173913043476,
+          "std": 42.86485565403838,
+          "latest_vs_mean_sigma": -0.9861631046097377,
+          "growth_mean_pct": 0.09648027607022547,
+          "growth_volatility_pp": 17.1266949339497,
+          "best_period": "1991-92",
+          "worst_period": "1982-83",
+          "rising_periods": 39,
+          "falling_periods": 6,
+          "regimes": {
+            "high_gt_1sd": 6,
+            "above_mean": 10,
+            "below_mean": 29,
+            "low_lt_minus1sd": 1
+          }
+        },
+        {
+          "series": "wpi_primary_articles",
+          "n": 46,
+          "first": 237.5,
+          "latest": 110.3,
+          "min": 104.3,
+          "max": 264.4,
+          "min_period": "2005-06",
+          "max_period": "1981-82",
+          "mean": 152.95652173913044,
+          "std": 39.99258626947923,
+          "latest_vs_mean_sigma": -1.0666107325918108,
+          "growth_mean_pct": 0.6738702413194364,
+          "growth_volatility_pp": 18.296301997495913,
+          "best_period": "1991-92",
+          "worst_period": "1982-83",
+          "rising_periods": 38,
+          "falling_periods": 7,
+          "regimes": {
+            "high_gt_1sd": 6,
+            "above_mean": 14,
+            "below_mean": 20,
+            "low_lt_minus1sd": 6
+          }
+        },
+        {
+          "series": "wpi_food_articles",
+          "n": 46,
+          "first": 208.0,
+          "latest": 112.8,
+          "min": 105.4,
+          "max": 284.4,
+          "min_period": "2005-06",
+          "max_period": "1993-94",
+          "mean": 158.24782608695654,
+          "std": 41.54046883130518,
+          "latest_vs_mean_sigma": -1.094061462606959,
+          "growth_mean_pct": 0.9798072258159417,
+          "growth_volatility_pp": 18.23561895786713,
+          "best_period": "1991-92",
+          "worst_period": "1994-95",
+          "rising_periods": 39,
+          "falling_periods": 6,
+          "regimes": {
+            "high_gt_1sd": 6,
+            "above_mean": 15,
+            "below_mean": 18,
+            "low_lt_minus1sd": 7
+          }
+        },
+        {
+          "series": "wpi_non_food_articles",
+          "n": 46,
+          "first": 217.7,
+          "latest": 102.5,
+          "min": 96.7,
+          "max": 249.1,
+          "min_period": "2005-06",
+          "max_period": "1993-94",
+          "mean": 146.85869565217394,
+          "std": 39.728302679782644,
+          "latest_vs_mean_sigma": -1.1165514925143696,
+          "growth_mean_pct": 0.6677480116695307,
+          "growth_volatility_pp": 18.559358910196224,
+          "best_period": "2010-11",
+          "worst_period": "1982-83",
+          "rising_periods": 33,
+          "falling_periods": 12,
+          "regimes": {
+            "high_gt_1sd": 7,
+            "above_mean": 11,
+            "below_mean": 22,
+            "low_lt_minus1sd": 6
+          }
+        },
+        {
+          "series": "wpi_fuel_power",
+          "n": 46,
+          "first": 354.3,
+          "latest": 88.5,
+          "min": 86.3,
+          "max": 427.5,
+          "min_period": "2016-17",
+          "max_period": "1981-82",
+          "mean": 154.5086956521739,
+          "std": 71.8149097057056,
+          "latest_vs_mean_sigma": -0.9191502979349928,
+          "growth_mean_pct": 0.7545728738041172,
+          "growth_volatility_pp": 22.211098548898534,
+          "best_period": "2021-22",
+          "worst_period": "1982-83",
+          "rising_periods": 32,
+          "falling_periods": 13,
+          "regimes": {
+            "high_gt_1sd": 8,
+            "above_mean": 7,
+            "below_mean": 31,
+            "low_lt_minus1sd": 0
+          }
+        },
+        {
+          "series": "wpi_manufactured_products",
+          "n": 46,
+          "first": 257.3,
+          "latest": 101.2,
+          "min": 98.1,
+          "max": 270.6,
+          "min_period": "2023-24",
+          "max_period": "1981-82",
+          "mean": 138.47173913043483,
+          "std": 41.33182611791483,
+          "latest_vs_mean_sigma": -0.901768507012077,
+          "growth_mean_pct": -0.1993368886385875,
+          "growth_volatility_pp": 15.929405225835986,
+          "best_period": "1989-90",
+          "worst_period": "1982-83",
+          "rising_periods": 39,
+          "falling_periods": 6,
+          "regimes": {
+            "high_gt_1sd": 6,
+            "above_mean": 10,
+            "below_mean": 30,
+            "low_lt_minus1sd": 0
+          }
+        }
+      ]
+    },
+    "wpi_monthly": {
+      "rows": 39,
+      "period_range": [
+        "2023-04",
+        "2026-06"
+      ],
+      "diagnostics": [
+        {
+          "series": "wpi_index",
+          "n": 39,
+          "first": 99.0,
+          "latest": 110.2,
+          "min": 98.3,
+          "max": 110.2,
+          "min_period": "2023-06",
+          "max_period": "2026-06",
+          "mean": 101.29230769230769,
+          "std": 2.74919936817829,
+          "latest_vs_mean_sigma": 3.2401041593410684,
+          "growth_mean_pct": 0.28538401231309435,
+          "growth_volatility_pp": 0.7845022372600519,
+          "best_period": "2026-04",
+          "worst_period": "2023-12",
+          "rising_periods": 22,
+          "falling_periods": 13,
+          "regimes": {
+            "high_gt_1sd": 4,
+            "above_mean": 7,
+            "below_mean": 27,
+            "low_lt_minus1sd": 1
+          }
+        }
+      ]
+    },
+    "inflation_variations": {
+      "rows": 46,
+      "period_range": [
+        "1980-81",
+        "2025-26"
+      ],
+      "diagnostics": [
+        {
+          "series": "wpi_variation_pct",
+          "n": 46,
+          "first": 18.2,
+          "latest": 0.4,
+          "min": -3.7,
+          "max": 18.2,
+          "min_period": "2015-16",
+          "max_period": "1980-81",
+          "mean": 6.0608695652173905,
+          "std": 4.022629226478599,
+          "latest_vs_mean_sigma": -1.407256111986464,
+          "growth_mean_pct": -0.9383911786042571,
+          "growth_volatility_pp": 167.37796579988606,
+          "best_period": "2021-22",
+          "worst_period": "2015-16",
+          "rising_periods": 16,
+          "falling_periods": 29,
+          "regimes": {
+            "high_gt_1sd": 5,
+            "above_mean": 17,
+            "below_mean": 16,
+            "low_lt_minus1sd": 8
+          }
+        },
+        {
+          "series": "cpi_variation_pct",
+          "n": 32,
+          "first": 3.5,
+          "latest": 4.6,
+          "min": -0.3,
+          "max": 13.9,
+          "min_period": "2000-01",
+          "max_period": "2009-10",
+          "mean": 6.275,
+          "std": 3.361355333406356,
+          "latest_vs_mean_sigma": -0.498310899580669,
+          "growth_mean_pct": 2.213672209355656,
+          "growth_volatility_pp": 116.20327025263835,
+          "best_period": "1994-95",
+          "worst_period": "2001-02",
+          "rising_periods": 12,
+          "falling_periods": 19,
+          "regimes": {
+            "high_gt_1sd": 7,
+            "above_mean": 6,
+            "below_mean": 16,
+            "low_lt_minus1sd": 3
+          }
+        },
+        {
+          "series": "cpi_wpi_gap",
+          "n": 32,
+          "first": -4.800000000000001,
+          "latest": 2.8999999999999995,
+          "min": -7.5,
+          "max": 10.1,
+          "min_period": "2000-01",
+          "max_period": "2009-10",
+          "mean": 1.134375,
+          "std": 4.054516348786948,
+          "latest_vs_mean_sigma": 0.43547117537909263,
+          "growth_mean_pct": -114.50804292528946,
+          "growth_volatility_pp": 286.0056278838777,
+          "best_period": "2003-04",
+          "worst_period": "2000-01",
+          "rising_periods": 9,
+          "falling_periods": 22,
+          "regimes": {
+            "high_gt_1sd": 3,
+            "above_mean": 13,
+            "below_mean": 12,
+            "low_lt_minus1sd": 4
+          }
+        }
+      ]
+    }
+  }
+}

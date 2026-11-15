@@ -1,0 +1,6 @@
+column_name,null_count,negative_count,row_count
+capital,0,0,20
+reserves_surplus,0,0,20
+deposits,0,0,20
+borrowings,0,0,20
+other_liabilities,0,0,20

@@ -1,0 +1,6 @@
+column_name,null_count,negative_count,row_count
+bank_rate,38,0,107
+repo_rate,3,0,107
+reverse_repo_rate,14,0,107
+sdf_rate,89,0,107
+msf_rate,32,0,107

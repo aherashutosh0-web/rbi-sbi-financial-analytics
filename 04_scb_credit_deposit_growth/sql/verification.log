@@ -1,0 +1,16 @@
+verification — P04 Scheduled Commercial Banks — Credit & Deposit Growth Engine
+==========================================================================================
+  PASS Q01  (1 rows × 5 cols)
+  PASS Q02  (1 rows × 11 cols)
+  PASS Q03  (60 rows × 4 cols)
+  PASS Q04  (60 rows × 5 cols)
+  PASS Q05  (60 rows × 3 cols)
+  PASS Q06  (60 rows × 3 cols)
+  PASS Q07  (10 rows × 4 cols)
+  PASS Q08  (1 rows × 5 cols)
+  PASS Q09  (1 rows × 6 cols)
+  PASS Q10  (0 rows × 4 cols)
+  PASS Q11  (60 rows × 4 cols)
+  PASS Q12  (5 rows × 4 cols)
+  PASS Q13  (1 rows × 6 cols)
+  PASS Q14  (60 rows × 6 cols)

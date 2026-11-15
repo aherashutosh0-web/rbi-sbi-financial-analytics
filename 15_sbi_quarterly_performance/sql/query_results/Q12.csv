@@ -1,0 +1,6 @@
+column_name,null_count,negative_count,row_count
+quarterlyInterestIncome,1,0,6
+quarterlyTotalRevenue,1,0,6
+quarterlyStockholdersEquity,1,0,6
+quarterlyInterestExpense,1,0,6
+quarterlyNetIncome,1,0,6

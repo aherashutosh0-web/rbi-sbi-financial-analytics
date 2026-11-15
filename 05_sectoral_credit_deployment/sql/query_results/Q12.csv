@@ -1,0 +1,6 @@
+column_name,null_count,negative_count,row_count
+agriculture,0,0,5
+industry,0,0,5
+services,0,0,5
+retail,0,0,5
+total_non_food_credit,0,0,5

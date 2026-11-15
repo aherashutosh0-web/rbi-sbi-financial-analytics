@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SCB Consolidated Balance Sheet & Efficiency Ratios · RBI–SBI Financial Analytics</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --canvas: #F4F6FB; --surface: #FFFFFF; --navy: #1B2A4A;
+    --ink: #12233F; --ink-muted: #5A6B87; --accent: #2D4E8F;
+    --grid: #D6DEEC; --pos: #1B8A5A; --neg: #C44536;
+    --font: 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--canvas); color: var(--ink); font-family: var(--font); }
+  header { background: var(--navy); color: #fff; padding: 28px 40px 22px; }
+  header .eyebrow { font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase;
+    color: #2D4E8F; font-weight: 600; }
+  header h1 { font-size: 26px; font-weight: 650; margin-top: 6px; }
+  header .sub { color: #B9C4DA; font-size: 13.5px; margin-top: 8px; max-width: 900px; line-height: 1.5; }
+  .bar { height: 5px; background: linear-gradient(90deg, #2D4E8F 0%, #2D4E8F99 40%, transparent 100%); }
+  main { padding: 28px 40px 60px; max-width: 1400px; margin: 0 auto; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 16px; margin: 22px 0 30px; }
+  .kpi { background: var(--navy); border-radius: 12px; padding: 18px 20px;
+    box-shadow: 0 1px 3px rgba(18,35,63,.12); }
+  .kpi-label { color: #AEBBD3; font-size: 11.5px; letter-spacing: .8px; text-transform: uppercase; }
+  .kpi-value { color: #2D4E8F; font-size: 27px; font-weight: 700; margin-top: 8px; }
+  .kpi-unit { color: #8FA0BC; font-size: 13px; font-weight: 500; margin-left: 5px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .card { background: var(--surface); border: 1px solid var(--grid); border-radius: 12px;
+    padding: 20px 22px 14px; }
+  .card.full { grid-column: 1 / -1; }
+  .card h2 { font-size: 15px; font-weight: 650; color: var(--ink); margin-bottom: 4px; }
+  .card .note { font-size: 11.5px; color: var(--ink-muted); margin-bottom: 12px; }
+  .chart-box { position: relative; height: 330px; }
+  footer { padding: 22px 40px; color: var(--ink-muted); font-size: 11.5px;
+    border-top: 1px solid var(--grid); line-height: 1.7; }
+  footer b { color: var(--ink); }
+  .pill { display:inline-block; padding: 3px 10px; border-radius: 999px;
+    background: #2D4E8F22; color: var(--accent); font-size: 11px; font-weight: 600;
+    margin-left: 8px; vertical-align: middle; }
+  @media (max-width: 980px) { .grid { grid-template-columns: 1fr; } main { padding: 20px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">Banking Sector · Financial Health</div>
+  <h1>SCB Consolidated Balance Sheet & Efficiency Ratios <span class="pill">P06</span></h1>
+  <div class="sub">How efficient is the banking system — balance-sheet structure, intermediation ratios and investment mix — and where is it trending?</div>
+</header>
+<div class="bar"></div>
+<main>
+  <section class="kpis">
+        <div class="kpi">
+          <div class="kpi-label">Total Liabilities (₹ cr)</div>
+          <div class="kpi-value">31,218,250<span class="kpi-unit">₹ cr</span></div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Deposits (₹ cr)</div>
+          <div class="kpi-value">7,942,827<span class="kpi-unit">₹ cr</span></div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Credit–Deposit Ratio</div>
+          <div class="kpi-value">81.44<span class="kpi-unit">%</span></div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Investments–Deposit Ratio</div>
+          <div class="kpi-value">26.54<span class="kpi-unit">%</span></div>
+        </div></section>
+  <section class="grid">
+    <div class="card full">
+      <h2>Consolidated Balance Sheet Structure (₹ crore)</h2>
+      <div class="note">Source: RBI Handbook of Statistics / market data · rendered with Chart.js</div>
+      <div class="chart-box"><canvas id="chart-0"></canvas></div>
+    </div>
+
+    <div class="card">
+      <h2>Intermediation Ratios (% of Aggregate Deposits)</h2>
+      <div class="note">Source: RBI Handbook of Statistics / market data · rendered with Chart.js</div>
+      <div class="chart-box"><canvas id="chart-1"></canvas></div>
+    </div>
+
+    <div class="card full">
+      <h2>Deployment Ratios (% of Working Funds)</h2>
+      <div class="note">Source: RBI Handbook of Statistics / market data · rendered with Chart.js</div>
+      <div class="chart-box"><canvas id="chart-2"></canvas></div>
+    </div></section>
+</main>
+<footer>
+  <b>Data sources:</b> Reserve Bank of India — Handbook of Statistics on Indian Economy (data.rbi.org.in); Yahoo Finance market data (SBIN.NS and benchmarks).<br>
+  <b>Design:</b> "Central Bank Blue" colour system — analogous blue structure + complementary amber accent
+  (60-30-10 rule, WCAG AA). See portfolio <b>COLOR_THEORY.md</b>.<br>
+  <b>Portfolio:</b> RBI–SBI Financial Analytics · 18 industrial-grade projects (SQL · Python · Excel · Dashboards)
+  · Generated for Ashutosh Aher — Business Analyst portfolio.
+</footer>
+<script>
+const PALETTE = ["#2D4E8F", "#2A9D8F", "#E9A23B", "#E76F51", "#7E57C2", "#B08968"];
+Chart.defaults.font.family = "'Segoe UI', Inter, sans-serif";
+Chart.defaults.color = "#5A6B87";
+Chart.defaults.borderColor = "#D6DEEC";
+const CHARTS = [{"type": "line", "title": "Consolidated Balance Sheet Structure (\u20b9 crore)", "labels": ["2005-06", "2006-07", "2007-08", "2008-09", "2009-10", "2010-11", "2011-12", "2012-13", "2013-14", "2014-15", "2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21", "2021-22", "2022-23", "2023-24", "2024-25"], "series": [{"label": "Deposits", "data": [866508.0, 950982.0, 1177330.0, 1449551.0, 1729006.0, 1923633.0, 2233903.0, 2613051.0, 2883262.0, 2977592.0, 3327835.0, 3652284.0, 4126237.0, 4322464.0, 4689842.0, 5416159.0, 5779131.0, 6436540.0, 7270409.0, 7942827.0]}, {"label": "Borrowings", "data": [1516811.0, 1981236.0, 2476936.0, 2999924.0, 3496720.0, 4297488.0, 5073559.0, 5879773.0, 6735213.0, 7388160.0, 7896467.0, 8116109.0, 8745997.0, 9676183.0, 10301897.0, 10806381.0, 12198769.0, 14319353.0, 17142309.0, 19119608.0]}, {"label": "Capital", "data": [144475.0, 195266.0, 322972.0, 297267.0, 365821.0, 458783.0, 373746.0, 375174.0, 471728.0, 528503.0, 563917.0, 680542.0, 730330.0, 698616.0, 765720.0, 947498.0, 1507282.0, 1168479.0, 1278007.0, 1426245.0]}, {"label": "Reserves & Surplus", "data": [116444.0, 158303.0, 109109.0, 196516.0, 173629.0, 184082.0, 243676.0, 334879.0, 406304.0, 458292.0, 524812.0, 737427.0, 594797.0, 663494.0, 787563.0, 981588.0, 778810.0, 788284.0, 708740.0, 987364.0]}], "accent": null}, {"type": "line", "title": "Intermediation Ratios (% of Aggregate Deposits)", "labels": ["1964-65", "1965-66", "1966-67", "1967-68", "1968-69", "1969-70", "1970-71", "1971-72", "1972-73", "1973-74", "1974-75", "1975-76", "1976-77", "1977-78", "1978-79", "1979-80", "1980-81", "1981-82", "1982-83", "1983-84", "1984-85", "1985-86", "1986-87", "1987-88", "1988-89", "1989-90", "1990-91", "1991-92", "1992-93", "1993-94", "1994-95", "1995-96", "1996-97", "1997-98", "1998-99", "1999-00", "2000-01", "2001-02", "2002-03", "2003-04", "2004-05", "2005-06", "2006-07", "2007-08", "2008-09", "2009-10", "2010-11", "2011-12", "2012-13", "2013-14", "2014-15", "2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21", "2021-22", "2022-23", "2023-24", "2024-25", "2025-26"], "series": [{"label": "Credit/Deposits", "data": [78.8, 77.5, 78.6, 78.6, 78.3, 79.0, 79.3, 74.1, 70.8, 73.0, 74.1, 76.8, 75.0, 67.3, 67.7, 67.8, 66.8, 67.9, 69.1, 68.1, 67.8, 65.6, 61.6, 59.8, 60.4, 60.8, 60.4, 54.4, 56.6, 52.2, 54.7, 58.6, 55.1, 54.1, 51.7, 53.6, 53.1, 53.4, 56.9, 55.9, 64.7, 71.5, 73.9, 73.9, 72.4, 72.2, 75.7, 78.0, 77.9, 77.8, 76.6, 77.72, 72.89, 75.49, 77.72, 76.44, 72.45, 72.22, 75.79, 80.25, 80.79, 81.44]}, {"label": "Investments/Deposits", "data": [null, null, null, null, null, 29.5, 30.0, 30.8, 33.5, 32.4, 33.1, 32.5, 31.5, 35.6, 33.7, 33.5, 34.7, 34.6, 35.7, 35.1, 38.9, 35.8, 37.6, 39.4, 39.0, 38.6, 39.0, 39.1, 39.3, 42.1, 38.6, 38.0, 37.7, 36.5, 35.7, 38.0, 38.5, 39.7, 42.7, 45.0, 43.5, 34.0, 30.3, 30.4, 30.4, 30.8, 28.8, 29.4, 29.7, 28.7, 29.2, 28.15, 28.17, 29.04, 26.89, 27.62, 29.53, 28.72, 30.01, 29.82, 29.66, 26.54]}, {"label": "Govt Securities/Deposits", "data": [27.8, 27.5, 26.1, 25.1, 24.3, 23.2, 23.1, 23.2, 25.0, 23.3, 23.9, 23.2, 22.4, 26.6, 24.5, 23.4, 24.3, 23.2, 23.5, 22.2, 25.9, 22.3, 24.2, 25.9, 25.6, 25.3, 26.0, 27.2, 28.3, 32.1, 30.4, 30.5, 31.4, 31.2, 31.3, 34.2, 35.3, 37.3, 40.9, 43.5, 42.3, 33.2, 29.7, 30.0, 30.1, 30.7, 28.7, 29.4, 29.7, 28.7, 29.18, 28.13, 28.16, 29.03, 26.87, 27.56, 29.52, 28.72, 30.01, 29.82, 29.66, 26.54]}], "accent": null}, {"type": "bar", "title": "Deployment Ratios (% of Working Funds)", "labels": ["1964-65", "1965-66", "1966-67", "1967-68", "1968-69", "1969-70", "1970-71", "1971-72", "1972-73", "1973-74", "1974-75", "1975-76", "1976-77", "1977-78", "1978-79", "1979-80", "1980-81", "1981-82", "1982-83", "1983-84", "1984-85", "1985-86", "1986-87", "1987-88", "1988-89", "1989-90", "1990-91", "1991-92", "1992-93", "1993-94", "1994-95", "1995-96", "1996-97", "1997-98", "1998-99", "1999-00", "2000-01", "2001-02", "2002-03", "2003-04", "2004-05", "2005-06", "2006-07", "2007-08", "2008-09", "2009-10", "2010-11", "2011-12", "2012-13", "2013-14", "2014-15", "2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21", "2021-22", "2022-23", "2023-24", "2024-25", "2025-26"], "series": [{"label": "Credit/Working Funds", "data": [7.7, 8.2, 8.5, 8.2, 8.6, 9.2, 10.1, 10.6, 11.2, 11.1, 11.2, 12.9, 14.5, 14.5, 16.4, 17.6, 17.5, 17.4, 18.6, 18.6, 19.6, 19.9, 20.1, 19.7, 20.0, 20.8, 20.4, 19.2, 20.2, 19.0, 20.8, 21.3, 20.2, 21.2, 20.5, 21.7, 23.6, 25.1, 28.8, 29.6, 33.9, 40.8, 45.0, 47.4, 49.3, 50.1, 50.6, 52.79, 52.9, 53.36, 52.43, 52.64, 50.95, 50.47, 51.7, 51.59, 55.15, 50.39, 52.36, 56.69, 57.36, 61.67]}, {"label": "Investments/Working Funds", "data": [null, null, null, null, null, 3.4, 3.8, 4.4, 5.3, 4.9, 5.0, 5.5, 6.1, 7.7, 8.2, 8.7, 9.1, 8.9, 9.6, 9.5, 11.3, 10.9, 12.3, 13.0, 12.9, 13.2, 13.2, 13.8, 14.0, 15.3, 14.7, 13.8, 13.8, 14.3, 14.1, 15.4, 17.1, 18.7, 21.6, 23.9, 22.8, 19.4, 18.4, 19.5, 20.7, 21.4, 19.3, 19.89, 20.17, 19.7, 19.99, 19.06, 19.69, 19.42, 17.89, 18.64, 22.48, 20.04, 20.73, 21.07, 21.06, 20.1]}], "accent": null}];
+CHARTS.forEach((c, i) => {
+  const el = document.getElementById('chart-' + i);
+  if (!el) return;
+  const isBar = c.type === 'bar' || c.type === 'hbar';
+  const cfg = {
+    type: c.type === 'hbar' ? 'bar' : (c.type === 'area' ? 'line' : c.type),
+    data: {
+      labels: c.labels,
+      datasets: c.series.map((s, j) => ({
+        label: s.label,
+        data: s.data,
+        borderColor: PALETTE[j % PALETTE.length],
+        backgroundColor: isBar ? PALETTE[j % PALETTE.length] + 'B3' : PALETTE[j % PALETTE.length] + '26',
+        borderWidth: 2, pointRadius: 0, pointHitRadius: 8,
+        fill: c.type === 'area' && j === 0 ? 'origin' : false,
+        tension: 0.25, borderRadius: isBar ? 4 : 0,
+      }))
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      indexAxis: c.type === 'hbar' ? 'y' : 'x',
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { position: 'top', align: 'start',
+          labels: { boxWidth: 12, boxHeight: 12, usePointStyle: true, pointStyle: 'rectRounded' } },
+        tooltip: { backgroundColor: "#1B2A4A", padding: 10, cornerRadius: 8,
+          titleFont: { size: 12 }, bodyFont: { size: 12 } }
+      },
+      scales: {
+        x: { grid: { color: "#D6DEEC", drawTicks: false }, ticks: { maxTicksLimit: 12, font: { size: 11 } } },
+        y: { grid: { color: "#D6DEEC", drawTicks: false }, ticks: { font: { size: 11 } } }
+      }
+    }
+  };
+  new Chart(el, cfg);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+column_name,null_count,negative_count,row_count
+dilutedeps_sbin,0,0,5
+totaldebt_sbin,0,0,5
+totalassets_sbin,0,0,5
+interestincome_sbin,0,0,5
+netincome_sbin,0,0,5

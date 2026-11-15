@@ -1,0 +1,34 @@
+period,cpi_iw,regime
+1993-94,258,BELOW average
+1994-95,284,ABOVE average
+1995-96,313,ABOVE average
+1996-97,342,ABOVE average
+1997-98,366,ABOVE average
+1998-99,414,HIGH  (> +1σ)
+1999-00,428,HIGH  (> +1σ)
+2000-01,444,HIGH  (> +1σ)
+2001-02,463,HIGH  (> +1σ)
+2002-03,482,HIGH  (> +1σ)
+2003-04,500,HIGH  (> +1σ)
+2004-05,520,HIGH  (> +1σ)
+2005-06,117,LOW   (< -1σ)
+2006-07,125,LOW   (< -1σ)
+2007-08,133,LOW   (< -1σ)
+2008-09,145,BELOW average
+2009-10,163,BELOW average
+2010-11,180,BELOW average
+2011-12,195,BELOW average
+2012-13,215,BELOW average
+2013-14,236,BELOW average
+2014-15,251,BELOW average
+2015-16,265,BELOW average
+2016-17,276,ABOVE average
+2017-18,284,ABOVE average
+2018-19,300,ABOVE average
+2019-20,323,ABOVE average
+2020-21,118,LOW   (< -1σ)
+2021-22,124,LOW   (< -1σ)
+2022-23,131,LOW   (< -1σ)
+2023-24,138,LOW   (< -1σ)
+2024-25,143,BELOW average
+2025-26,147,BELOW average
