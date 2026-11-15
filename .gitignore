@@ -9,3 +9,4 @@ __pycache__/
 *.sqlite-wal
 *.sqlite-shm
 .DS_Store
+*/dashboard/index.html

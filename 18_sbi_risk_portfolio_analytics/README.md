@@ -28,7 +28,7 @@ Yahoo Finance — SBIN.NS (State Bank of India, NSE) daily OHLCV 2010–2026 and
 | Python analysis | `python/analysis.py` | KPIs, diagnostics, regime statistics |
 | Analysis outputs | `python/output/` | `analysis.json`, `summary.md` |
 | Excel workbook | `excel/*.xlsx` | cover, KPIs, data, derived analysis, native charts |
-| Dashboard | `dashboard/index.html` | colour-theory HTML dashboard (Chart.js) |
+| Dashboard build | `scripts/build_dashboards.py` | optional local HTML output; not committed |
 
 ## SQL Focus
 return distributions, volatility clustering, correlation matrix vs peers, risk-adjusted returns
@@ -50,7 +50,7 @@ python3 scripts/build_sql.py        # per-project SQL suites
 python3 scripts/run_sql.py          # execute & verify every query
 python3 scripts/build_python.py     # generate + run project analyses
 python3 scripts/build_excel.py      # formatted workbooks
-python3 scripts/build_dashboards.py # HTML dashboards
+python3 scripts/build_dashboards.py # optional local HTML output (ignored by Git)
 python3 scripts/build_readme.py     # this file
 ```
 

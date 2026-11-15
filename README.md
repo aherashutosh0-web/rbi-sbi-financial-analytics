@@ -1,5 +1,5 @@
 # RBI–SBI Financial Analytics Portfolio
-### 18 industry-grade data projects · Real RBI + SBI data · SQL · Python · Excel · Dashboards
+### 18 analytics projects · RBI + SBI data · SQL · Python · Excel
 
 **Prepared for:** Ashutosh Aher — Business Analyst / Business Analytics portfolio (Nov 2026)
 **Data provenance:** 100% real, downloaded data — no synthetic series.
@@ -14,8 +14,7 @@
 - **252/252 SQL analytic queries executed & passing** (see each `sql/verification.log`)
 - 18 Python analyses executed (`python/output/analysis.json`)
 - 18 formatted Excel workbooks (native charts, colour-theory styling)
-- 18 HTML dashboards — one design system ("Central Bank Blue", WCAG AA) documented
-  in [`COLOR_THEORY.md`](COLOR_THEORY.md)
+- Dashboard-generation scripts are included; rendered HTML dashboards are not committed.
 
 ---
 
@@ -57,7 +56,6 @@
 │   ├── requirements.txt
 │   └── output/            analysis.json + summary.md
 ├── excel/                 formatted workbook: Read Me · KPIs · Data · Analysis · Charts
-└── dashboard/index.html   colour-theory dashboard (Chart.js)
 ```
 
 ## Portfolio-Level Artefacts
@@ -77,7 +75,7 @@ python3 scripts/build_sql.py           # SQL suites
 python3 scripts/run_sql.py             # execute & verify 252 queries
 python3 scripts/build_python.py        # generate + run 18 analyses
 python3 scripts/build_excel.py         # 18 workbooks
-python3 scripts/build_dashboards.py    # 18 dashboards
+python3 scripts/build_dashboards.py    # optional local HTML output (ignored by Git)
 python3 scripts/build_readme.py        # project READMEs
 # or simply:
 python3 scripts/run_all.py
